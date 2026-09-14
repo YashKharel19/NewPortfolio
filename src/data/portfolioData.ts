@@ -9,7 +9,7 @@ export const portfolioData: PortfolioData = {
   email: 'yash048339@gmail.com',
   phone: '548-881-7339',
   linkedinUrl: 'https://www.linkedin.com/in/yashkharel',
-  githubUrl: 'https://github.com/yash048',
+  githubUrl: 'https://github.com/YashKharel19',
   originalSiteUrl: 'https://kharelyash.com.np/',
   summary:
     'Entrepreneurship Program, Business Development, and Operations professional with 8+ years of experience designing and coordinating programs, building strategic partnerships, engaging diverse stakeholders, and supporting organizations through growth and change. Experienced across startup, education, technology, and community environments, with hands-on experience in program delivery, recruitment, stakeholder engagement, performance measurement, and continuous improvement. MBA with a Computer Science background and practical experience building businesses, connecting organizations with partners, and turning ideas into actionable programs and outcomes.',
@@ -23,7 +23,7 @@ export const portfolioData: PortfolioData = {
     {
       value: 'MBA + CS',
       label: 'Dual Strategic Edge',
-      description: 'Queen Margaret Univ (Edinburgh) & Kathmandu Univ'
+      description: 'Queen Margaret University (Edinburgh) & Kathmandu University'
     },
     {
       value: '100% Autopilot',
@@ -48,7 +48,7 @@ export const portfolioData: PortfolioData = {
       badge: 'Live on Google Play & App Store',
       playStoreUrl: 'https://play.google.com/store/apps/details?id=com.yash048.lumasha&hl=en_CA',
       appStoreUrl: 'https://apps.apple.com/ca/app/lumasha/id6749781997',
-      websiteUrl: 'https://www.etsy.com/shop/Lumasha',
+      websiteUrl: 'https://lumasha.com/',
       tags: ['React Native', 'TypeScript', 'Google Play (com.yash048.lumasha)', 'Apple App Store', 'Audio Pronunciation', 'Mobile UX', 'GTM'],
       features: [
         'Published globally on Google Play Store (Package: com.yash048.lumasha) and Apple App Store (ID: 6749781997).',
