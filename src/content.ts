@@ -114,7 +114,7 @@ export const siteContent: PortfolioContent = {
     email: 'yash048339@gmail.com',
     phone: '548-881-7339',
     linkedinUrl: 'https://www.linkedin.com/in/yashkharel',
-    githubUrl: 'https://github.com/yash048',
+    githubUrl: 'https://github.com/YashKharel19',
     websiteUrl: 'https://kharelyash.com.np/',
     officialCvDownloadName: 'Yash_Kharel_Curriculum_Vitae.pdf',
     tags: [
