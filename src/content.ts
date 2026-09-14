@@ -3,7 +3,7 @@
 // Easily edit text, links, photos, products, and jobs in this single file.
 // ============================================================================
 
-import yashPhoto from './assets/images/YK.MOV';
+import yashPhoto from './assets/images/YK.JPG';
 import lumashaPhoto from './assets/images/lumasha.png';
 import bagishaPhoto from './assets/images/bagisha.png';
 
