@@ -118,11 +118,11 @@ export const siteContent: PortfolioContent = {
     websiteUrl: 'https://kharelyash.com.np/',
     officialCvDownloadName: 'Yash_Kharel_Curriculum_Vitae.pdf',
     tags: [
-      'MBA (Queen Margaret Univ)',
-      'B.Sc. CS (Kathmandu Univ)',
+      'MBA (Queen Margaret University)',
+      'B.Sc. CS (Kathmandu University)',
       'Co-Founder & Ideator',
       'Senior Software Engineer',
-      'Bagisha (100% Autopilot)',
+      'Bagisha (Cofounded- Self sustaining +7 years)',
       'Lumasha App (iOS & Android)'
     ]
   },
