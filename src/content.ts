@@ -3,9 +3,9 @@
 // Easily edit text, links, photos, products, and jobs in this single file.
 // ============================================================================
 
-import yashPhoto from './assets/images/yash_profile_1789403888905.jpg';
-import lumashaPhoto from './assets/images/lumasha_app_ui_1789403901445.jpg';
-import bagishaPhoto from './assets/images/bagisha_room_1789403912949.jpg';
+import yashPhoto from './assets/images/YK.MOV';
+import lumashaPhoto from './assets/images/lumasha.png';
+import bagishaPhoto from './assets/images/bagisha.png';
 
 export interface TechIconItem {
   id: string;
@@ -139,8 +139,8 @@ export const siteContent: PortfolioContent = {
       category: 'Ventures',
       badge: '100% Autopilot Venture',
       photo: bagishaPhoto,
-      websiteUrl: 'https://kharelyash.com.np/',
-      liveDemoUrl: 'https://kharelyash.com.np/',
+      websiteUrl: 'https://www.bagishareadingroom.com/',
+      liveDemoUrl: 'https://www.bagishareadingroom.com/',
       metrics: [
         { label: 'Operating Model', value: '100% Autopilot' },
         { label: 'Revenue Model', value: 'Recurring Subscriptions' },
@@ -183,14 +183,10 @@ export const siteContent: PortfolioContent = {
       photo: lumashaPhoto,
       playStoreUrl: 'https://play.google.com/store/apps/details?id=com.yash048.lumasha&hl=en_CA',
       appStoreUrl: 'https://apps.apple.com/ca/app/lumasha/id6749781997',
-      websiteUrl: 'https://www.etsy.com/shop/Lumasha',
-      liveDemoUrl: 'https://play.google.com/store/apps/details?id=com.yash048.lumasha&hl=en_CA',
-      githubUrl: 'https://github.com/yash048',
+      websiteUrl: 'https://lumasha.com/',
+
       metrics: [
-        { label: 'Google Play ID', value: 'com.yash048.lumasha' },
-        { label: 'Apple App ID', value: '6749781997' },
-        { label: 'Platform Engine', value: 'React Native & Expo' },
-        { label: 'Ecosystem', value: 'App + Physical Kits' }
+       
       ],
       tags: ['React Native', 'TypeScript', 'Expo Audio / AV', 'Mobile Architecture', 'Google Play Console', 'App Store Connect'],
       keyHighlights: [
