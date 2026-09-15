@@ -82,9 +82,9 @@ export const ExperienceSection = ({ onOpenResume }: ExperienceSectionProps) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* CV Download Banner Callout (Addresses User's Explicit Request: "not whole cv just experience one can download cv seperately") */}
-        <div className="mb-12 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-teal-50 via-cyan-50 to-emerald-50 border-2 border-teal-200/80 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mb-12 p-5 sm:p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
-            <div className="w-12 h-12 rounded-2xl bg-teal-500 text-white flex items-center justify-center shrink-0 shadow-md shadow-teal-500/25">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-700 text-white flex items-center justify-center shrink-0 shadow-sm">
               <FileText className="w-6 h-6" />
             </div>
             <div>
@@ -157,7 +157,7 @@ export const ExperienceSection = ({ onOpenResume }: ExperienceSectionProps) => {
                 }}
                 className={`px-3 py-1.5 text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 ${
                   selectedFilter === tab.id
-                    ? 'bg-gradient-to-r from-teal-600 to-cyan-600 text-white shadow-sm'
+                    ? 'bg-emerald-700 text-white shadow-sm'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-white'
                 }`}
               >
@@ -296,8 +296,8 @@ export const ExperienceSection = ({ onOpenResume }: ExperienceSectionProps) => {
                         {exp.keyMetrics && (
                           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
                             {exp.keyMetrics.map((m, mIdx) => (
-                              <div key={mIdx} className="p-3 rounded-xl bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200">
-                                <div className="text-[10px] uppercase font-bold text-teal-700">{m.label}</div>
+                              <div key={mIdx} className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                                <div className="text-[10px] uppercase font-bold text-emerald-700">{m.label}</div>
                                 <div className="text-sm font-extrabold text-slate-900 mt-0.5">{m.value}</div>
                               </div>
                             ))}

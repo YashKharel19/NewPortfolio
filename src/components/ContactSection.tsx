@@ -55,7 +55,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-white via-orange-50/20 to-slate-50 border-t border-orange-100">
+    <section id="contact" className="py-24 bg-white border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -66,7 +66,7 @@ export const ContactSection = () => {
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Let&apos;s Build{' '}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 via-emerald-600 to-blue-600">
+            <span className="text-emerald-700">
               High-Yield Ventures
             </span>
           </h2>
@@ -286,10 +286,10 @@ export const ContactSection = () => {
                   />
                 </div>
 
-                {/* Submit button in Orange-Green-Bluish gradient */}
+                {/* Submit button in solid emerald */}
                 <button
                   type="submit"
-                  className="w-full py-3 px-6 rounded-2xl bg-gradient-to-r from-orange-500 via-emerald-600 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg shadow-orange-600/20 transition-all hover:translate-y-[-1px] cursor-pointer active:scale-98"
+                  className="w-full py-3 px-6 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-md transition-all hover:translate-y-[-1px] cursor-pointer active:scale-98"
                 >
                   <Send className="w-4 h-4" />
                   <span>Send Message Directly</span>

@@ -93,7 +93,7 @@ export const Navbar = ({ onOpenResume, onOpenContact }: NavbarProps) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand with Orange-Green-Bluish gradient */}
+        {/* Brand with Solid Emerald */}
         <a
           id="nav-logo"
           href="#overview"
@@ -103,11 +103,11 @@ export const Navbar = ({ onOpenResume, onOpenContact }: NavbarProps) => {
           }}
           className="flex items-center gap-2.5 group focus:outline-none"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-500 via-emerald-500 to-blue-600 text-white font-extrabold flex items-center justify-center text-base shadow-md shadow-orange-500/25 group-hover:scale-105 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-emerald-700 text-white font-extrabold flex items-center justify-center text-base shadow-sm group-hover:bg-emerald-800 transition-colors">
             YK
           </div>
           <div className="flex flex-col">
-            <span className="font-extrabold text-slate-900 text-base tracking-tight leading-tight group-hover:text-orange-600 transition-colors">
+            <span className="font-extrabold text-slate-900 text-base tracking-tight leading-tight group-hover:text-emerald-700 transition-colors">
               Yash Kharel
             </span>
             <div className="flex items-center gap-1.5 text-[11px] text-slate-500 font-medium">
@@ -118,7 +118,7 @@ export const Navbar = ({ onOpenResume, onOpenContact }: NavbarProps) => {
           </div>
         </a>
 
-        {/* Desktop Links with Dynamic Highlight in Orange-Green-Bluish */}
+        {/* Desktop Links with Dynamic Highlight in Solid Orange & Emerald */}
         <nav id="desktop-nav-links" className="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1 rounded-2xl border border-slate-200/70">
           {navLinks.map((link) => {
             const isSelected = activeSection === link.href;
@@ -129,12 +129,12 @@ export const Navbar = ({ onOpenResume, onOpenContact }: NavbarProps) => {
                 onClick={() => handleNavClick(link.href)}
                 className={`relative px-3.5 py-1.5 text-xs rounded-xl transition-all duration-200 flex items-center gap-1.5 cursor-pointer select-none ${
                   isSelected
-                    ? 'text-orange-950 bg-white border border-orange-300/90 shadow-sm font-extrabold ring-1 ring-orange-400/40 scale-[1.02]'
+                    ? 'text-emerald-950 bg-white border border-emerald-300 shadow-sm font-extrabold ring-1 ring-emerald-400/40 scale-[1.02]'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-white/60 border border-transparent font-bold'
                 }`}
               >
                 {isSelected && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-orange-500 to-emerald-500 animate-pulse shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse shrink-0" />
                 )}
                 <span>{link.name}</span>
               </a>
@@ -170,14 +170,14 @@ export const Navbar = ({ onOpenResume, onOpenContact }: NavbarProps) => {
             </a>
           </div>
 
-          {/* Direct PDF Download with Orange-Green-Bluish tint */}
+          {/* Direct PDF Download with Solid Emerald Accent */}
           <button
             id="nav-resume-download-btn"
             onClick={handleDirectDownload}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-extrabold text-orange-950 bg-gradient-to-r from-orange-100 via-emerald-50 to-blue-50 hover:from-orange-200 hover:to-emerald-100 border border-orange-300/80 rounded-xl transition-all shadow-xs cursor-pointer active:scale-95"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-extrabold text-emerald-950 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 rounded-xl transition-all shadow-xs cursor-pointer active:scale-95"
             title="Download official PDF resume"
           >
-            {downloaded ? <Check className="w-3.5 h-3.5 text-emerald-700 stroke-[3]" /> : <Download className="w-3.5 h-3.5 text-orange-700" />}
+            {downloaded ? <Check className="w-3.5 h-3.5 text-emerald-700 stroke-[3]" /> : <Download className="w-3.5 h-3.5 text-emerald-700" />}
             <span>{downloaded ? 'PDF Saved!' : 'Download CV (PDF)'}</span>
           </button>
 
@@ -188,13 +188,13 @@ export const Navbar = ({ onOpenResume, onOpenContact }: NavbarProps) => {
               playClickSound();
               onOpenResume();
             }}
-            className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-bold text-slate-600 hover:text-orange-800 hover:bg-orange-50/60 rounded-xl transition-all cursor-pointer"
+            className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-bold text-slate-600 hover:text-emerald-800 hover:bg-emerald-50/60 rounded-xl transition-all cursor-pointer"
             title="Read CV in ATS Modal Reader"
           >
             <span>Read CV</span>
           </button>
 
-          {/* Connect Button in Orange-Green-Bluish Gradient */}
+          {/* Connect Button in Solid Emerald */}
           <a
             id="nav-contact-btn"
             href="#contact"
@@ -206,10 +206,10 @@ export const Navbar = ({ onOpenResume, onOpenContact }: NavbarProps) => {
                 onOpenContact();
               }
             }}
-            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold rounded-xl shadow-sm transition-all hover:translate-y-[-1px] ${
+            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold rounded-xl shadow-xs transition-all hover:translate-y-[-1px] ${
               activeSection === '#contact'
-                ? 'bg-gradient-to-r from-orange-600 via-emerald-600 to-blue-700 text-white ring-2 ring-orange-400'
-                : 'text-white bg-gradient-to-r from-orange-500 via-emerald-600 to-blue-600 hover:from-orange-600 hover:to-blue-700'
+                ? 'bg-emerald-800 text-white ring-2 ring-emerald-500'
+                : 'text-white bg-emerald-700 hover:bg-emerald-800'
             }`}
           >
             <Briefcase className="w-3.5 h-3.5" />
@@ -257,18 +257,18 @@ export const Navbar = ({ onOpenResume, onOpenContact }: NavbarProps) => {
                 }}
                 className={`flex items-center justify-between px-3.5 py-2.5 text-sm rounded-xl transition-all ${
                   isSelected
-                    ? 'bg-gradient-to-r from-orange-100 to-emerald-50 text-orange-950 font-extrabold border border-orange-300 shadow-xs'
-                    : 'text-slate-800 hover:bg-orange-50 hover:text-orange-800 font-bold'
+                    ? 'bg-emerald-50 text-emerald-950 font-extrabold border border-emerald-300 shadow-xs'
+                    : 'text-slate-800 hover:bg-slate-100 hover:text-slate-900 font-bold'
                 }`}
               >
                 <div className="flex items-center gap-2">
                   {isSelected && (
-                    <span className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-emerald-500 animate-pulse" />
+                    <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
                   )}
                   <span>{link.name}</span>
                 </div>
                 {isSelected && (
-                  <span className="text-[10px] uppercase font-black px-2 py-0.5 rounded-full bg-gradient-to-r from-orange-500 to-emerald-600 text-white">
+                  <span className="text-[10px] uppercase font-black px-2 py-0.5 rounded-full bg-emerald-700 text-white">
                     Active
                   </span>
                 )}
@@ -282,9 +282,9 @@ export const Navbar = ({ onOpenResume, onOpenContact }: NavbarProps) => {
                 handleDirectDownload();
                 setMobileMenuOpen(false);
               }}
-              className="w-full flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-extrabold text-orange-950 bg-gradient-to-r from-orange-100 via-emerald-50 to-blue-50 border border-orange-300 rounded-xl"
+              className="w-full flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-extrabold text-emerald-950 bg-emerald-50 border border-emerald-300 rounded-xl"
             >
-              <Download className="w-4 h-4 text-orange-800" />
+              <Download className="w-4 h-4 text-emerald-800" />
               <span>Download Official CV (PDF)</span>
             </button>
 

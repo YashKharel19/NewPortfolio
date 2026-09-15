@@ -61,12 +61,7 @@ export const AnimatedTechStack = () => {
   };
 
   return (
-    <section id="tech-stack" className="py-20 bg-gradient-to-b from-white via-orange-50/20 to-blue-50/15 relative overflow-hidden border-b border-orange-100">
-      {/* Vibrant Ambient Glow Background in Orange, Green, and Bluish */}
-      <div className="absolute -top-32 right-10 w-96 h-96 bg-orange-200/25 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 -left-20 w-96 h-96 bg-blue-200/25 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-emerald-200/20 rounded-full blur-3xl pointer-events-none" />
-
+    <section id="tech-stack" className="py-20 bg-white relative overflow-hidden border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header: Minimal & Punchy */}
@@ -78,7 +73,7 @@ export const AnimatedTechStack = () => {
           
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Engineering &amp;{' '}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 via-emerald-600 to-blue-600">
+            <span className="text-emerald-700">
               Technology Stacks
             </span>
           </h2>
@@ -100,8 +95,8 @@ export const AnimatedTechStack = () => {
                   }}
                   className={`px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-xs cursor-pointer ${
                     isSelected
-                      ? 'bg-gradient-to-r from-orange-500 to-emerald-600 text-white shadow-md shadow-orange-500/20'
-                      : 'bg-white text-slate-700 hover:bg-orange-50 border border-slate-200 hover:border-orange-300'
+                      ? 'bg-emerald-700 text-white shadow-sm'
+                      : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
                   }`}
                 >
                   {cat}

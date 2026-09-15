@@ -127,7 +127,7 @@ export const SkillsSection = () => {
         </div>
 
         {/* Integration Callout: Why The MBA + CS Intersection Matters */}
-        <div className="mt-14 p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 border border-slate-800">
+        <div className="mt-14 p-8 rounded-2xl bg-slate-900 border border-slate-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
             <div className="md:col-span-2 space-y-2">
               <span className="text-xs font-bold uppercase tracking-wider text-teal-300">

@@ -4,7 +4,7 @@ import { portfolioData } from '../data/portfolioData';
 
 export const EducationSection = () => {
   return (
-    <section id="education" className="py-24 bg-gradient-to-b from-white via-orange-50/20 to-slate-50 border-b border-orange-100">
+    <section id="education" className="py-24 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -15,7 +15,7 @@ export const EducationSection = () => {
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Education &amp;{' '}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 via-emerald-600 to-blue-600">
+            <span className="text-emerald-700">
               Core Disciplines
             </span>
           </h2>

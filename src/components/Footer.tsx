@@ -24,7 +24,7 @@ export const Footer = ({ onOpenResume }: FooterProps) => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
           {/* Monogram & Title */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-orange-500 via-emerald-500 to-blue-600 text-white font-extrabold flex items-center justify-center text-sm shadow-md">
+            <div className="w-10 h-10 rounded-2xl bg-emerald-700 text-white font-extrabold flex items-center justify-center text-sm shadow-sm">
               YK
             </div>
             <div>

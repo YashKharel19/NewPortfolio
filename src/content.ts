@@ -33,7 +33,7 @@ export interface ProductItem {
   websiteUrl?: string;
   liveDemoUrl?: string;
   githubUrl?: string;
-  metrics: { label: string; value: string }[];
+  metrics: (string | { label: string; value: string })[];
   tags: string[];
   keyHighlights: string[];
   // Real product video — optional

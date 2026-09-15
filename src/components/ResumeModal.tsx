@@ -135,7 +135,7 @@ ${ed.summary}
         {/* Top Control Bar */}
         <div className="flex items-center justify-between px-6 py-4 bg-slate-900 text-white border-b border-slate-800">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-orange-500 via-emerald-500 to-blue-600 text-white font-extrabold flex items-center justify-center text-xs shadow-sm">
+            <div className="w-8 h-8 rounded-xl bg-emerald-700 text-white font-extrabold flex items-center justify-center text-xs shadow-sm">
               YK
             </div>
             <div>
@@ -152,7 +152,7 @@ ${ed.summary}
             {/* Primary Download PDF Button */}
             <button
               onClick={handleDownloadPdf}
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-black rounded-xl bg-gradient-to-r from-orange-500 to-emerald-500 hover:from-orange-600 hover:to-emerald-600 text-white shadow-md transition-all cursor-pointer active:scale-95"
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-black rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white shadow-md transition-all cursor-pointer active:scale-95"
             >
               {pdfDownloaded ? <Check className="w-3.5 h-3.5 stroke-[3]" /> : <Download className="w-3.5 h-3.5" />}
               <span>{pdfDownloaded ? 'Downloaded!' : 'Download PDF CV'}</span>
@@ -272,8 +272,8 @@ ${ed.summary}
           </div>
 
           {/* Featured Ventures & Product Releases */}
-          <div className="space-y-3 bg-gradient-to-r from-orange-50/70 via-emerald-50/40 to-blue-50/40 p-4 sm:p-5 rounded-2xl border border-orange-200">
-            <h2 className="text-xs font-extrabold uppercase tracking-widest text-orange-950">
+          <div className="space-y-3 bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200">
+            <h2 className="text-xs font-extrabold uppercase tracking-widest text-emerald-800">
               Featured Ventures &amp; Applications
             </h2>
             <div className="space-y-3 text-xs text-slate-800">

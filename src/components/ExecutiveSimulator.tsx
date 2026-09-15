@@ -182,28 +182,28 @@ export const ExecutiveSimulator = () => {
 
               {/* Real-time KPI Yield Row */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 my-6">
-                <div className="p-3.5 rounded-2xl bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200">
-                  <div className="text-[10px] uppercase font-bold text-teal-700 tracking-wider">Hours Saved / Mo</div>
+                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                  <div className="text-[10px] uppercase font-bold text-orange-700 tracking-wider">Hours Saved / Mo</div>
                   <div className="text-2xl font-extrabold text-slate-900 mt-1">~{estimatedHoursSaved} hrs</div>
                   <div className="text-[10px] text-slate-500 mt-0.5">Automated workflows</div>
                 </div>
 
-                <div className="p-3.5 rounded-2xl bg-gradient-to-br from-cyan-50 to-teal-50 border border-cyan-200">
-                  <div className="text-[10px] uppercase font-bold text-cyan-700 tracking-wider">Pipeline Lift</div>
+                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                  <div className="text-[10px] uppercase font-bold text-emerald-700 tracking-wider">Pipeline Lift</div>
                   <div className="text-2xl font-extrabold text-slate-900 mt-1">{estimatedPipelineLift}</div>
                   <div className="text-[10px] text-slate-500 mt-0.5">GTM execution velocity</div>
                 </div>
 
-                <div className="col-span-2 sm:col-span-1 p-3.5 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200">
+                <div className="col-span-2 sm:col-span-1 p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
                   <div className="text-[10px] uppercase font-bold text-emerald-700 tracking-wider">Tech-Biz Friction</div>
-                  <div className="text-2xl font-extrabold text-emerald-600 mt-1">0%</div>
+                  <div className="text-2xl font-extrabold text-emerald-700 mt-1">0%</div>
                   <div className="text-[10px] text-slate-500 mt-0.5">Dual fluency alignment</div>
                 </div>
               </div>
 
               {/* Tactical Validation */}
-              <div className="p-4 rounded-2xl bg-teal-50/80 border border-teal-200 text-xs space-y-1">
-                <div className="font-bold text-teal-900">Demonstrated Track Record:</div>
+              <div className="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200 text-xs space-y-1">
+                <div className="font-bold text-emerald-900">Demonstrated Track Record:</div>
                 <p className="text-slate-700 leading-relaxed font-medium">
                   {bottlenecks.find((b) => b.id === bottleneck)?.yashExperience}
                 </p>
@@ -239,12 +239,12 @@ export const ExecutiveSimulator = () => {
 
                 {/* Yash Kharel Hybrid */}
                 <div className="space-y-1 pt-1">
-                  <div className="flex justify-between text-xs font-extrabold text-teal-800">
+                  <div className="flex justify-between text-xs font-extrabold text-emerald-800">
                     <span>Yash Kharel (MBA Edinburgh + B.Sc. Computer Science)</span>
-                    <span className="text-teal-700">Complete Operator (98%)</span>
+                    <span className="text-emerald-700">Complete Operator (98%)</span>
                   </div>
                   <div className="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
-                    <div className="bg-gradient-to-r from-teal-600 via-cyan-600 to-emerald-600 h-full w-[98%] shadow-sm"></div>
+                    <div className="bg-emerald-600 h-full w-[98%] shadow-sm"></div>
                   </div>
                 </div>
               </div>
@@ -255,7 +255,7 @@ export const ExecutiveSimulator = () => {
                 <a
                   href="#contact"
                   onClick={playClickSound}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-teal-600 to-cyan-600 text-white text-xs font-bold hover:from-teal-500 hover:to-cyan-500 transition-colors shadow-sm"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-700 text-white text-xs font-bold hover:bg-emerald-800 transition-colors shadow-sm"
                 >
                   <span>Connect with Yash</span>
                   <ArrowRight className="w-3.5 h-3.5" />
