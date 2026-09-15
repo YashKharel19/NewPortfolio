@@ -6,6 +6,9 @@
 import yashPhoto from './assets/images/YK.JPG';
 import lumashaPhoto from './assets/images/lumasha.png';
 import bagishaPhoto from './assets/images/bagisha.png';
+import ojaswiVideo from './assets/images/ojaswi.mp4';
+import bagishaVideo from './assets/images/bagisha.mp4';
+import lumashavideo from './assets/images/lumashawebsite.mp4';
 
 export interface TechIconItem {
   id: string;
@@ -151,7 +154,7 @@ products: [
       'Developed and prepared the application for Android and iOS distribution.',
     ],
     video: {
-    src: '/videos/lumasha-app.mp4',
+    src: lumashaVideo,
     title: 'Lumasha App Demo',
     description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
     poster: lumashaPhoto,
@@ -179,7 +182,7 @@ products: [
       'Integrated frontend, backend, database and email functionality.',
     ],
     video: {
-    src: '/videos/lumasha-app.mp4',
+    src: lumashaVideo,
     title: 'Lumasha App Demo',
     description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
     poster: lumashaPhoto,
@@ -210,7 +213,7 @@ products: [
       'Recognized as an Idea Studio Season 7 Finalist for its innovative approach and commitment to reading culture.',
     ],
    video: {
-    src: '/videos/lumasha-app.mp4',
+    src: bagishaVideo,
     title: 'Lumasha App Demo',
     description:
       'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
@@ -251,7 +254,7 @@ products: [
       'Supported implementation, training, troubleshooting and post-deployment optimization.',
     ],
     video: {
-      src: '/videos/lumasha-app.mp4',
+      src: lumashaVideo,
       title: 'Lumasha App Demo',
       description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
       poster: lumashaPhoto,
@@ -273,7 +276,7 @@ products: [
       'Focused on presenting work through a clean and responsive web experience.',
     ],
     video: {
-      src: '/videos/lumasha-app.mp4',
+      src: lumashaVideo,
       title: 'Lumasha App Demo',
       description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
       poster: lumashaPhoto,
@@ -296,7 +299,7 @@ products: [
       'Built the frontend using Angular and responsive styling.',
     ],
     video: {
-      src: '/videos/lumasha-app.mp4',
+      src: lumashaVideo,
       title: 'Lumasha App Demo',
       description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
       poster: lumashaPhoto,
