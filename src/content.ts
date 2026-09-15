@@ -218,7 +218,7 @@ products: [
     title: 'Lumasha App Demo',
     description:
       'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
-    poster: lumashaPhoto,
+    poster: bagishaPhoto,
   },
   },
 
@@ -255,10 +255,10 @@ products: [
       'Supported implementation, training, troubleshooting and post-deployment optimization.',
     ],
     video: {
-      src: lumashaVideo,
+      src: ojaswiVideo,
       title: 'Lumasha App Demo',
       description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
-      poster: lumashaPhoto,
+      poster: ojaswiPhoto,
     },
   },
   {
@@ -277,10 +277,10 @@ products: [
       'Focused on presenting work through a clean and responsive web experience.',
     ],
     video: {
-      src: lumashaVideo,
+      src: ojaswiaVideo,
       title: 'Lumasha App Demo',
       description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
-      poster: lumashaPhoto,
+      poster: ojaswiPhoto,
     },
   },
 
@@ -300,10 +300,10 @@ products: [
       'Built the frontend using Angular and responsive styling.',
     ],
     video: {
-      src: lumashaVideo,
+      src: ojaswiVideo,
       title: 'Lumasha App Demo',
       description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
-      poster: lumashaPhoto,
+      poster:ojaswiPhoto,
     },
   },
 
