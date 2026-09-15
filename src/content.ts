@@ -8,7 +8,7 @@ import lumashaPhoto from './assets/images/lumasha.png';
 import bagishaPhoto from './assets/images/bagisha.png';
 import ojaswiVideo from './assets/images/ojaswi.mp4';
 import bagishaVideo from './assets/images/bagisha.mp4';
-import lumashavideo from './assets/images/lumashawebsite.mp4';
+import lumashaVideo from './assets/images/lumashawebsite.mp4';
 
 export interface TechIconItem {
   id: string;
