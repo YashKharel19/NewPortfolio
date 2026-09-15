@@ -193,6 +193,8 @@ export const Hero = ({ onOpenResume }: HeroProps) => {
               {/* Bagisha Button - Vibrant Warm Orange */}
               <a
                 href="https://www.bagishareadingroom.com/"
+                target="_blank"
+                rel="noreferrer"
                 onClick={playClickSound}
                 className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold text-sm shadow-lg shadow-orange-500/25 transition-all hover:-translate-y-0.5 cursor-pointer active:scale-95"
               >
@@ -203,6 +205,8 @@ export const Hero = ({ onOpenResume }: HeroProps) => {
               {/* Lumasha Button - Vibrant Emerald Green to Bluish */}
               <a
                 href="https://lumasha.com/"
+                target="_blank"
+                rel="noreferrer"
                 onClick={playClickSound}
                 className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 hover:from-emerald-500 hover:to-blue-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/25 transition-all hover:-translate-y-0.5 cursor-pointer active:scale-95"
               >
