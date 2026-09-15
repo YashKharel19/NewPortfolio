@@ -3,6 +3,8 @@
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #0f172a;
+    background-color: #f8fafc;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -12,11 +14,11 @@
 
 /* Custom subtle scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
@@ -26,101 +28,124 @@
   background: #94a3b8;
 }
 
-/* 🎨 Rich CSS Animations */
-@keyframes float {
+/* 🎨 Single-Color Creative Animations (Pure Greenish Accent, No Gradients) */
+@keyframes floatGentle {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-8px) rotate(0.5deg);
+    transform: translateY(-6px);
   }
 }
 
-@keyframes floatSlow {
-  0%, 100% {
-    transform: translateY(0px) scale(1);
+@keyframes singleColorPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.45);
   }
-  50% {
-    transform: translateY(-12px) scale(1.01);
+  70% {
+    box-shadow: 0 0 0 10px rgba(5, 150, 105, 0);
   }
-}
-
-@keyframes floatReverse {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(8px) rotate(-0.5deg);
+  100% {
+    box-shadow: 0 0 0 0 rgba(5, 150, 105, 0);
   }
 }
 
-@keyframes pulseGlow {
-  0%, 100% {
-    opacity: 0.5;
-    transform: scale(1);
+@keyframes singleColorBorderBeam {
+  0% {
+    transform: translateX(-100%);
   }
-  50% {
-    opacity: 0.85;
-    transform: scale(1.05);
+  50%, 100% {
+    transform: translateX(250%);
   }
 }
 
-@keyframes recordingBlink {
+@keyframes singleColorBlink {
   0%, 100% {
     opacity: 1;
     transform: scale(1);
   }
   50% {
-    opacity: 0.3;
-    transform: scale(0.9);
-  }
-}
-
-@keyframes spinSlow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    opacity: 0.35;
+    transform: scale(0.85);
   }
 }
 
 .animate-float {
-  animation: float 4s ease-in-out infinite;
+  animation: floatGentle 4s ease-in-out infinite;
 }
 
-.animate-float-slow {
-  animation: floatSlow 6s ease-in-out infinite;
+.animate-single-pulse {
+  animation: singleColorPulse 2.4s infinite;
 }
 
-.animate-float-reverse {
-  animation: floatReverse 5s ease-in-out infinite;
+.animate-single-blink {
+  animation: singleColorBlink 1.4s ease-in-out infinite;
 }
 
-.animate-pulse-glow {
-  animation: pulseGlow 3s ease-in-out infinite;
+/* Single-Color Beam on Top Border */
+.single-color-beam {
+  position: relative;
+  overflow: hidden;
+}
+.single-color-beam::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 2px;
+  background-color: #059669;
+  box-shadow: 0 0 10px #059669;
+  animation: singleColorBorderBeam 3.5s ease-in-out infinite;
+  z-index: 10;
 }
 
-.animate-recording-dot {
-  animation: recordingBlink 1.2s ease-in-out infinite;
+/* 🔤 Interactive Typography Effects */
+.font-interactive-word {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease, letter-spacing 0.25s ease;
+  cursor: default;
+}
+.font-interactive-word:hover {
+  transform: translateY(-2px);
+  color: #059669;
+  letter-spacing: -0.015em;
 }
 
-.animate-spin-slow {
-  animation: spinSlow 20s linear infinite;
+.hover-underline-accent {
+  position: relative;
+  display: inline-block;
+}
+.hover-underline-accent::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #059669;
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 2px;
+}
+.hover-underline-accent:hover::after {
+  width: 100%;
 }
 
-/* Glassmorphism and interactive depth */
-.glass-card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+.tracking-interactive {
+  transition: letter-spacing 0.3s ease, color 0.2s ease;
+}
+.tracking-interactive:hover {
+  letter-spacing: 0.04em;
+  color: #059669;
 }
 
 .interactive-hover-card {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .interactive-hover-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 30px -10px rgba(13, 148, 136, 0.15);
+  transform: translateY(-4px);
+  border-color: #059669;
+  box-shadow: 0 16px 32px -8px rgba(5, 150, 105, 0.12);
 }
+
 
