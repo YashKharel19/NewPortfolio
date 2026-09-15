@@ -127,269 +127,558 @@ export const siteContent: PortfolioContent = {
     ]
   },
 
+    // ==========================================================================
+  // 📱 2. FEATURED PRODUCTS & PROJECTS
   // ==========================================================================
-  // 📱 2. FEATURED PRODUCTS (BAGISHA, LUMASHA & COMPREHENSIVE PORTFOLIO)
-  // ==========================================================================
-  products: [
-    {
-      id: 'bagisha-operations',
-      title: 'Bagisha Reading Room',
-      subtitle: 'Commercial Workspace Sanctuary Scaled to 100% Autopilot',
-      tagline: 'Urban study sanctuary scaled from ground-up ideation into self-sustaining autopilot operations',
-      category: 'Ventures',
-      badge: '100% Autopilot Venture',
-      photo: bagishaPhoto,
-      websiteUrl: 'https://www.bagishareadingroom.com/',
-      liveDemoUrl: 'https://www.bagishareadingroom.com/',
-      metrics: [
-        { label: 'Operating Model', value: '100% Autopilot' },
-        { label: 'Revenue Model', value: 'Recurring Subscriptions' },
-        { label: 'Founder Ingress', value: 'Zero Daily Intervention' },
-        { label: 'Facility Usage', value: 'Full Capacity Optimization' }
+products: [
+  {
+    id: 'lumasha-app',
+    title: 'Lumasha Language App',
+    subtitle: 'Mobile App',
+    tagline: 'Learn Local, Speak Global',
+    category: 'Ventures',
+    badge: 'Live Product',
+    photo: lumashaPhoto,
+    playStoreUrl: 'https://play.google.com/',
+    appStoreUrl: 'https://www.apple.com/app-store/',
+    websiteUrl: 'https://lumasha.com/',
+    metrics: [
+      'Nepali language learning',
+      'Interactive flashcards',
+      'Cultural learning for children',
+    ],
+    tags: ['React Native', 'TypeScript', 'Expo', 'Mobile App'],
+    keyHighlights: [
+      'Built a child-focused language learning experience for Nepali and cultural education.',
+      'Designed interactive flashcards and audio-based learning experiences.',
+      'Developed and prepared the application for Android and iOS distribution.',
+    ],
+    recording: {
+      title: 'Lumasha App — Product Walkthrough',
+      duration: 'Video Review',
+      steps: [
+        {
+          title: 'Video Placeholder — App Demo',
+          description:
+            'Video placeholder for the Lumasha mobile app walkthrough and product demonstration.',
+          visualType: 'flashcards',
+        },
+        {
+          title: 'Video Placeholder — App Review',
+          description:
+            'Video placeholder for the second Lumasha app review and feature walkthrough.',
+          visualType: 'flashcards',
+        },
       ],
-      tags: ['Operations Scaling', 'Autopilot SOPs', 'Subscription Tiers', 'Seat Allocation Engine', 'CRM Automation', 'P&L Strategy'],
-      keyHighlights: [
-        'Co-founded and scaled an urban study sanctuary from idea to profitable commercial operations.',
-        'Engineered tiered monthly subscription packages securing predictable, recurring monthly cashflow.',
-        'Designed real-time seat allocation workflows and automated self-check-in to maximize peak occupancy.',
-        'Authored standardized SOP playbooks enabling on-site staff to run customer management and facility care.'
-      ],
-      recording: {
-        title: 'Bagisha Autopilot Operation & Seat Allocation System',
-        duration: '0:40',
-        steps: [
-          {
-            title: 'Real-Time Seat Matrix Engine',
-            description: 'Dynamic seating map allocating quiet pods, collaborative desks, and power stations.',
-            badgeText: 'Seat Allocation Engine',
-            visualType: 'seat-matrix'
-          },
-          {
-            title: 'Automated SOPs & Self-Check-in',
-            description: 'Self-serve access control, automated membership renewals, and real-time CRM updates.',
-            badgeText: 'Autopilot Workflow',
-            visualType: 'seat-matrix'
-          }
-        ]
-      }
     },
-    {
-      id: 'lumasha-app',
-      title: 'Lumasha Language App',
-      subtitle: 'Learn Local, Speak Global',
-      tagline: 'Published worldwide on Google Play Store & Apple App Store with physical kits on Etsy',
-      category: 'Mobile & Web',
-      badge: 'Live on Google Play & App Store',
-      photo: lumashaPhoto,
-      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.yash048.lumasha&hl=en_CA',
-      appStoreUrl: 'https://apps.apple.com/ca/app/lumasha/id6749781997',
-      websiteUrl: 'https://lumasha.com/',
+  },
 
-      metrics: [
-       
+  {
+    id: 'lumasha-website',
+    title: 'Lumasha Website',
+    subtitle: 'Ecommerce Website',
+    tagline: 'A digital storefront for language, culture & learning',
+    category: 'Mobile & Web',
+    badge: 'Live Website',
+    photo: lumashaPhoto,
+    websiteUrl: 'https://lumasha.com/',
+    metrics: [
+      'Ecommerce platform',
+      'Digital product showcase',
+      'Customer-focused storefront',
+    ],
+    tags: ['React', 'Node.js', 'PostgreSQL', 'Heroku', 'Resend'],
+    keyHighlights: [
+      'Built the ecommerce website for Lumasha.',
+      'Created a product-focused experience for educational and cultural products.',
+      'Integrated frontend, backend, database and email functionality.',
+    ],
+    recording: {
+      title: 'Lumasha Website — Walkthrough',
+      duration: 'Web Demo',
+      steps: [
+        {
+          title: 'Website Placeholder',
+          description:
+            'Video placeholder for the Lumasha ecommerce website walkthrough.',
+          visualType: 'web-browser',
+        },
       ],
-      tags: ['React Native', 'TypeScript', 'Expo Audio / AV', 'Mobile Architecture', 'Google Play Console', 'App Store Connect'],
-      keyHighlights: [
-        'Live in Canada and globally across both Apple App Store and Google Play Store.',
-        'Integrated native audio engine with one-tap acoustic replay for authentic pronunciation.',
-        'High-contrast visual memory retention cards engineered for diaspora youth and children.',
-        'Omnichannel model connecting mobile digital learning with physical flashcard sets on Etsy.'
-      ],
-      recording: {
-        title: 'Lumasha Mobile Interactive Screen Recording',
-        duration: '0:35',
-        steps: [
-          {
-            title: 'Multilingual Curriculum Dashboard',
-            description: 'Engaging category picker: Nepali, Gujarati, Punjabi & Hindi language pathways.',
-            badgeText: 'Language Selector',
-            visualType: 'flashcards'
-          },
-          {
-            title: 'Interactive Audio Pronunciation',
-            description: 'Native audio synthesis engine with one-tap acoustic replay for phonetic mastery.',
-            badgeText: 'Audio Engine',
-            visualType: 'flashcards'
-          },
-          {
-            title: 'Visual Memory Retention Flashcards',
-            description: 'High-contrast illustrated flashcards engineered for children & diaspora youth.',
-            badgeText: 'Gamified Cards',
-            visualType: 'flashcards'
-          }
-        ]
-      }
     },
-    {
-      id: 'dlytica-operations',
-      title: 'Dlytica Academy Workforce System',
-      subtitle: 'Multi-Program Student Lifecycle & Enterprise CRM in Toronto',
-      tagline: 'End-to-end academy operations, cross-functional coaching, and hiring partner pipelines',
-      category: 'Enterprise Systems',
-      badge: 'Toronto Enterprise Operations',
-      photo: bagishaPhoto,
-      websiteUrl: 'https://kharelyash.com.np/',
-      liveDemoUrl: 'https://kharelyash.com.np/',
-      metrics: [
-        { label: 'Location', value: 'Toronto, ON' },
-        { label: 'Operational Hub', value: 'Centralized CRM' },
-        { label: 'Cohort Delivery', value: 'Multi-Program' },
-        { label: 'Outcome', value: 'Workforce Placement' }
-      ],
-      tags: ['Workforce Enablement', 'CRM Pipelines', 'Cohort Analytics', 'Angular / TypeScript', 'Employer Partnerships'],
-      keyHighlights: [
-        'Supervised cross-functional instructors and coordinators across concurrent technology training cohorts.',
-        'Built enterprise CRM workflows managing the candidate journey from intake to graduation and job placement.',
-        'Expanded institutional relationships with corporate employers and community partners across Ontario.',
-        'Constructed operational KPI dashboards giving leadership real-time visibility into attendance and outcomes.'
-      ],
-      recording: {
-        title: 'Dlytica Cohort Analytics & CRM Telemetry Portal',
-        duration: '0:30',
-        steps: [
-          {
-            title: 'Student Lifecycle Tracking Pipeline',
-            description: 'Real-time telemetry showing candidate progression through coursework and employer interviews.',
-            badgeText: 'Cohort CRM',
-            visualType: 'terminal'
-          },
-          {
-            title: 'KPI Dashboards & Placement Telemetry',
-            description: 'Automated executive metrics tracking graduation rates and partner hiring velocity.',
-            badgeText: 'Operational KPIs',
-            visualType: 'web-browser'
-          }
-        ]
-      }
-    },
-    {
-      id: 'java-microservice',
-      title: 'High-Throughput Booking Microservice',
-      subtitle: 'Enterprise Java 17 & Spring Boot Concurrency Architecture',
-      tagline: 'Thread-safe inventory allocation guaranteeing zero double-bookings during concurrency bursts',
-      category: 'Enterprise Systems',
-      badge: 'Java 17 & Spring Boot 3 Core',
-      photo: lumashaPhoto,
-      githubUrl: 'https://github.com/yash048',
-      websiteUrl: 'https://kharelyash.com.np/',
-      metrics: [
-        { label: 'Language', value: 'Java 17' },
-        { label: 'Framework', value: 'Spring Boot 3' },
-        { label: 'Database', value: 'PostgreSQL' },
-        { label: 'Integrity', value: 'ACID Transactions' }
-      ],
-      tags: ['Java 17', 'Spring Boot', 'PostgreSQL', 'Docker', 'REST APIs', 'Concurrency', 'Flyway'],
-      keyHighlights: [
-        'Thread-safe resource allocation preventing race conditions and double-bookings under peak traffic.',
-        'Spring Security architecture with stateless JWT authentication and role-based permissions (RBAC).',
-        'Relational data modeling with PostgreSQL and automated schema migration via Flyway.',
-        'High test coverage with JUnit and containerized deployment with Docker.'
-      ],
-      recording: {
-        title: 'Java 17 Concurrency & ACID Microservice Engine',
-        duration: '0:30',
-        steps: [
-          {
-            title: 'Thread-Safe Seat Allocation Lock',
-            description: 'Optimistic & pessimistic locking preventing conflicting transactions.',
-            badgeText: 'Locking Engine',
-            visualType: 'terminal'
-          },
-          {
-            title: 'Stateless JWT Security & RBAC',
-            description: 'Microservice authentication layer protecting administrative and booking endpoints.',
-            badgeText: 'Spring Security',
-            visualType: 'terminal'
-          }
-        ]
-      }
-    },
-    {
-      id: 'personal-hub',
-      title: 'Personal Web Headquarters',
-      subtitle: 'Official Online Hub at kharelyash.com.np',
-      tagline: 'High-speed reactive web architecture serving international recruiters and partners',
-      category: 'Mobile & Web',
-      badge: 'Official Web Presence',
-      photo: lumashaPhoto,
-      websiteUrl: 'https://kharelyash.com.np/',
-      liveDemoUrl: 'https://kharelyash.com.np/',
-      githubUrl: 'https://github.com/yash048',
-      metrics: [
-        { label: 'Domain', value: 'kharelyash.com.np' },
-        { label: 'Performance', value: 'Sub-second Load' },
-        { label: 'Availability', value: '100% Global' },
-        { label: 'Stack', value: 'React + TypeScript' }
-      ],
-      tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Motion', 'Cloudflare CDN'],
-      keyHighlights: [
-        'Established online headquarters recognized across Canadian, UK, and global professional networks.',
-        'Single-file JSON configuration allowing live updates without altering presentation logic.',
-        'Vibrant blue-green interactive palette with hardware-accelerated animations and Web Audio feedback.'
-      ],
-      recording: {
-        title: 'kharelyash.com.np Interactive Web Hub',
-        duration: '0:25',
-        steps: [
-          {
-            title: 'Single-Source Data Architecture',
-            description: 'One-click resume export, social links, and live product updates.',
-            badgeText: 'JSON / TS Driven',
-            visualType: 'web-browser'
-          },
-          {
-            title: 'Interactive Audio & Visual Controls',
-            description: 'Subtle sound feedback and smooth responsive navigation on all viewports.',
-            badgeText: 'Modern UX',
-            visualType: 'web-browser'
-          }
-        ]
-      }
-    },
-    {
-      id: 'angular-portal',
-      title: 'Reactive Enterprise Operations Portal',
-      subtitle: 'Angular SPA with RxJS Asynchronous Streams & Real-Time Telemetry',
-      tagline: 'Modular single-page application with complex data grids and executive KPI aggregation',
-      category: 'Enterprise Systems',
-      badge: 'Angular & RxJS Architecture',
-      photo: bagishaPhoto,
-      githubUrl: 'https://github.com/yash048',
-      websiteUrl: 'https://kharelyash.com.np/',
-      metrics: [
-        { label: 'Framework', value: 'Angular' },
-        { label: 'Streams', value: 'RxJS Pipelines' },
-        { label: 'Type Safety', value: 'Strict TypeScript' },
-        { label: 'Routing', value: 'Modular Lazy Load' }
-      ],
-      tags: ['Angular', 'TypeScript', 'RxJS', 'SCSS', 'REST APIs', 'Reactive Forms'],
-      keyHighlights: [
-        'RxJS reactive stream pipelines delivering fluid live updates without unnecessary component re-renders.',
-        'Modular lazy-loaded architecture ensuring rapid initial paint times across desktop and mobile.',
-        'Granular administrative routing guards protecting sensitive organizational metrics and financial summaries.'
-      ],
-      recording: {
-        title: 'Angular Reactive Telemetry & Stream Visualizer',
-        duration: '0:30',
-        steps: [
-          {
-            title: 'RxJS Reactive Stream Pipelines',
-            description: 'Continuous asynchronous state feeds driving real-time KPI card updates.',
-            badgeText: 'Reactive Stream',
-            visualType: 'terminal'
-          },
-          {
-            title: 'Dynamic Filtering & Data Grid',
-            description: 'Instant multi-parameter filtering across cohort tables and financial rows.',
-            badgeText: 'Data Grid',
-            visualType: 'web-browser'
-          }
-        ]
-      }
-    }
-  ],
+  },
 
-  // ==========================================================================
+  {
+    id: 'bagisha-reading-room',
+    title: 'Bagisha Reading Room',
+    subtitle: 'Reading Room Platform',
+    tagline: 'A peaceful space to read, focus and belong',
+    category: 'Ventures',
+    badge: 'Venture',
+    photo: bagishaPhoto,
+    websiteUrl: 'https://www.bagishareadingroom.com/',
+    metrics: [
+      'Central Kathmandu location',
+      'High-speed internet',
+      'Community-focused study environment',
+    ],
+    tags: ['PHP', 'CSS', 'Web Development', 'Operations'],
+    keyHighlights: [
+      'Created a peaceful environment where individuals can study independently while remaining part of a communal learning atmosphere.',
+      'Designed a personalized and orderly physical study environment for focused reading and quiet contemplation.',
+      'Provided high-speed internet for online reading, research and browsing.',
+      'Built a friendly and welcoming space supported by approachable staff.',
+      'Located in the heart of Kathmandu for students, researchers and readers.',
+      'Recognized as an Idea Studio Season 7 Finalist for its innovative approach and commitment to reading culture.',
+    ],
+    recording: {
+      title: 'Bagisha — Space & Experience',
+      duration: 'Video Placeholder',
+      steps: [
+        {
+          title: 'Reading Room Experience',
+          description:
+            'Video placeholder showcasing the Bagisha Reading Room environment, study spaces and overall experience.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'connectex-vpp',
+    title: 'Connectex Virtual Power Plant',
+    subtitle: 'Enterprise Energy Platform',
+    tagline: 'Turning complex energy data into operational decisions',
+    category: 'Enterprise Systems',
+    badge: 'Professional Project',
+    photo: yashPhoto,
+    metrics: [
+      'Virtual Power Plant',
+      'Real-time operations',
+      'AWS cloud platform',
+    ],
+    tags: [
+      'Java',
+      'Spring Boot',
+      'React',
+      'Vue.js',
+      'AWS',
+      'SQL',
+      'MongoDB',
+    ],
+    keyHighlights: [
+      'Acted as the bridge between product managers, developers and business stakeholders throughout the VPP product lifecycle.',
+      'Translated business and technical requirements into functional specifications, technical documentation and implementation plans.',
+      'Designed and developed dashboards and operational reporting tools for monitoring, forecasting and data-driven decision making.',
+      'Worked with AWS EC2, Lambda, Redshift, Cognito and API Gateway.',
+      'Worked with SQL, MongoDB and high-volume real-time operational data.',
+      'Coordinated UAT and SIT, including issue tracking, validation and stakeholder reporting.',
+      'Applied Lean and Six Sigma principles to identify process gaps and improve operational efficiency.',
+      'Supported implementation, training, troubleshooting and post-deployment optimization.',
+    ],
+    recording: {
+      title: 'Connectex VPP — Platform Walkthrough',
+      duration: 'Video Placeholder',
+      steps: [
+        {
+          title: 'VPP Dashboard Placeholder',
+          description:
+            'Video placeholder for the Virtual Power Plant dashboard and operational workflow.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'ecommerce-website',
+    title: 'Ecommerce Website',
+    subtitle: 'Web Project',
+    tagline: 'Ecommerce for a startup',
+    category: 'Mobile & Web',
+    badge: 'Web Project',
+    photo: lumashaPhoto,
+    websiteUrl: 'https://lumasha.com/',
+    metrics: [
+      'Startup ecommerce platform',
+      'Product-focused storefront',
+    ],
+    tags: ['React', 'Node.js', 'PostgreSQL', 'Heroku', 'Resend'],
+    keyHighlights: [
+      'Developed an ecommerce platform for a startup.',
+      'Connected frontend, backend, database and email services.',
+    ],
+    recording: {
+      title: 'Ecommerce Website',
+      duration: 'Web Demo',
+      steps: [
+        {
+          title: 'Ecommerce Placeholder',
+          description:
+            'Video placeholder for the ecommerce website and shopping experience.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'personal-portfolio',
+    title: 'Personal Portfolio',
+    subtitle: 'Web Project',
+    tagline: 'Personal portfolio for an interior designer',
+    category: 'Mobile & Web',
+    badge: 'Web Project',
+    photo: yashPhoto,
+    websiteUrl: 'https://ojaswirijal.com.np/',
+    metrics: ['Personal portfolio website'],
+    tags: ['HTML5', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery'],
+    keyHighlights: [
+      'Designed and developed a personal portfolio website for an interior designer.',
+      'Focused on presenting work through a clean and responsive web experience.',
+    ],
+    recording: {
+      title: 'Personal Portfolio',
+      duration: 'Web Demo',
+      steps: [
+        {
+          title: 'Portfolio Placeholder',
+          description:
+            'Video placeholder for the personal portfolio website.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'dlfn',
+    title: 'Dalit Liberation Front of Nepal',
+    subtitle: 'Organization Website',
+    tagline: 'Official website platform',
+    category: 'Mobile & Web',
+    badge: 'Web Project',
+    photo: yashPhoto,
+    websiteUrl: 'https://dlfn.org/',
+    metrics: ['Official organization website'],
+    tags: ['Angular 6', 'CSS'],
+    keyHighlights: [
+      'Developed the official website for Dalit Liberation Front of Nepal.',
+      'Built the frontend using Angular and responsive styling.',
+    ],
+    recording: {
+      title: 'DLFN Website',
+      duration: 'Web Demo',
+      steps: [
+        {
+          title: 'Website Placeholder',
+          description:
+            'Video placeholder for the DLFN website.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'oag-report',
+    title: 'OAG REPORT',
+    subtitle: 'Financial Reporting System',
+    tagline: 'Financial reporting for the Office of the Auditor General, Nepal',
+    category: 'Enterprise Systems',
+    badge: 'Confidential',
+    photo: yashPhoto,
+    metrics: ['Government financial reporting'],
+    tags: ['Angular 6', 'Java', 'CSS'],
+    keyHighlights: [
+      'Financial Reporting System for the Office of the Auditor General, Nepal.',
+      'Developed enterprise reporting functionality using Angular and Java.',
+    ],
+    recording: {
+      title: 'OAG REPORT',
+      duration: 'Project Placeholder',
+      steps: [
+        {
+          title: 'Confidential Project',
+          description:
+            'Video placeholder. Project details are limited due to confidentiality.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'malepa-report',
+    title: 'MALEPA REPORT',
+    subtitle: 'Financial Reporting System',
+    tagline: 'Reporting system for the Financial Comptroller General Office',
+    category: 'Enterprise Systems',
+    badge: 'Confidential',
+    photo: yashPhoto,
+    metrics: ['Government financial reporting'],
+    tags: ['Angular 6', 'Java', 'CSS'],
+    keyHighlights: [
+      'Developed a reporting system for the Financial Comptroller General Office.',
+      'Worked on Angular and Java-based enterprise reporting functionality.',
+    ],
+    recording: {
+      title: 'MALEPA REPORT',
+      duration: 'Project Placeholder',
+      steps: [
+        {
+          title: 'Confidential Project',
+          description:
+            'Video placeholder. Project details are limited due to confidentiality.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'cas',
+    title: 'CAS',
+    subtitle: 'Centralized Accounting System',
+    tagline: 'Centralized accounting for the Ministry of Foreign Affairs, Nepal',
+    category: 'Enterprise Systems',
+    badge: 'Confidential',
+    photo: yashPhoto,
+    metrics: ['Government accounting system'],
+    tags: ['Angular 6', 'Java', 'CSS'],
+    keyHighlights: [
+      'Centralized Accounting System for the Ministry of Foreign Affairs, Nepal.',
+      'Developed enterprise accounting functionality using Angular and Java.',
+    ],
+    recording: {
+      title: 'CAS',
+      duration: 'Project Placeholder',
+      steps: [
+        {
+          title: 'Confidential Project',
+          description:
+            'Video placeholder. Project details are limited due to confidentiality.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'cgas',
+    title: 'CGAS',
+    subtitle: 'Government Accounting System',
+    tagline: 'Computerized Government Accounting System',
+    category: 'Enterprise Systems',
+    badge: 'Government System',
+    photo: yashPhoto,
+    metrics: [
+      'Government accounting',
+      'Financial reporting',
+      'Enterprise system',
+    ],
+    tags: ['Angular 6', 'Java', 'CSS'],
+    keyHighlights: [
+      'Worked on the Computerized Government Accounting System for the Financial Comptroller General Office.',
+      'Supported accounting and financial reporting workflows within a government enterprise environment.',
+      'Built and maintained frontend functionality using Angular and backend functionality using Java.',
+    ],
+    recording: {
+      title: 'CGAS',
+      duration: 'Project Placeholder',
+      steps: [
+        {
+          title: 'Government System Placeholder',
+          description:
+            'Video placeholder for CGAS. Detailed project screens are not publicly displayed.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'rafr-system',
+    title: 'RAFR System',
+    subtitle: 'Revenue, Accounting & Financial Reporting',
+    tagline: 'Financial operations for the Ministry of Foreign Affairs',
+    category: 'Enterprise Systems',
+    badge: 'Confidential',
+    photo: yashPhoto,
+    metrics: ['Revenue and financial reporting'],
+    tags: ['Angular 6', 'Java', 'CSS'],
+    keyHighlights: [
+      'Revenue, Accounting & Financial Reporting System for the Ministry of Foreign Affairs.',
+      'Worked on enterprise financial workflows and reporting functionality.',
+    ],
+    recording: {
+      title: 'RAFR System',
+      duration: 'Project Placeholder',
+      steps: [
+        {
+          title: 'Confidential Project',
+          description:
+            'Video placeholder. Project details are limited due to confidentiality.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'license-module',
+    title: 'License Module',
+    subtitle: 'File & Data Integration',
+    tagline: 'Turning uploaded files and form data into usable documents',
+    category: 'Enterprise Systems',
+    badge: 'Confidential',
+    photo: yashPhoto,
+    metrics: ['File processing', 'API integration'],
+    tags: ['React', 'CSS', '.NET Core API'],
+    keyHighlights: [
+      'Built functionality to upload files and integrate them with form data.',
+      'Generated new files through a .NET Core API.',
+      'Developed the frontend experience using React.',
+    ],
+    recording: {
+      title: 'License Module',
+      duration: 'Project Placeholder',
+      steps: [
+        {
+          title: 'Module Placeholder',
+          description:
+            'Video placeholder for the file upload and document generation workflow.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'integrated-ict',
+    title: 'Integrated ICT',
+    subtitle: 'Company Website',
+    tagline: 'A responsive digital presence built for a technology company',
+    category: 'Mobile & Web',
+    badge: 'Professional Project',
+    photo: yashPhoto,
+    liveDemoUrl:
+      'https://safe-fjord-65589.herokuapp.com/?fbclid=IwAR3aLhu3bmXxsGvxCFptk5JGxUtn5OwZm_dJjRYM2sdSRMxYhgu7r_77rLU#/',
+    metrics: [
+      'Corporate website',
+      'Responsive interface',
+      'Client-focused design',
+    ],
+    tags: ['React', 'CSS', 'JavaScript', 'Responsive Web'],
+    keyHighlights: [
+      'Developed the website for Integrated ICT Pvt. Ltd.',
+      'Created a flexible website design that could adapt to the company content and business requirements.',
+      'Worked on responsive frontend development using React and CSS.',
+    ],
+    recording: {
+      title: 'Integrated ICT — Website Walkthrough',
+      duration: 'Web Demo',
+      steps: [
+        {
+          title: 'Company Website Placeholder',
+          description:
+            'Video placeholder for the Integrated ICT website and responsive interface.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'semantro',
+    title: 'Semantro',
+    subtitle: 'Company Website',
+    tagline: 'A responsive digital presence for Semantro Pvt. Ltd.',
+    category: 'Mobile & Web',
+    badge: 'Web Project',
+    photo: yashPhoto,
+    websiteUrl: 'https://www.semantro.com',
+    metrics: ['Corporate website'],
+    tags: ['React', 'CSS'],
+    keyHighlights: [
+      'Developed the website for Semantro Pvt. Ltd.',
+      'Designed the website according to company content and requirements.',
+      'Built the frontend using React and CSS.',
+    ],
+    recording: {
+      title: 'Semantro Website',
+      duration: 'Web Demo',
+      steps: [
+        {
+          title: 'Website Placeholder',
+          description:
+            'Video placeholder for the Semantro corporate website.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'tea-nepal',
+    title: 'Tea Nepal',
+    subtitle: 'Event Showcase Website',
+    tagline: 'Showcasing an international tea event',
+    category: 'Mobile & Web',
+    badge: 'Web Project',
+    photo: yashPhoto,
+    liveDemoUrl:
+      'https://calm-inlet-98561.herokuapp.com/?fbclid=IwAR2VY9slzRuM3X_xoaUYE6YyMI-cGdvy8dxRwwUc6I8O4AxBCaC57BXQlYU',
+    metrics: ['Event showcase website'],
+    tags: ['React', 'CSS'],
+    keyHighlights: [
+      'Developed a showcase website for the International Tea Event.',
+      'Presented event information through a responsive React-based experience.',
+    ],
+    recording: {
+      title: 'Tea Nepal',
+      duration: 'Web Demo',
+      steps: [
+        {
+          title: 'Event Website Placeholder',
+          description:
+            'Video placeholder for the Tea Nepal event showcase website.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+
+  {
+    id: 'bits-innovation',
+    title: 'Bits Innovation',
+    subtitle: 'Company Website',
+    tagline: 'Showcasing a technology company through the web',
+    category: 'Mobile & Web',
+    badge: 'Web Project',
+    photo: yashPhoto,
+    websiteUrl: 'http://www.bitsinnovation.com/',
+    metrics: ['Corporate showcase website'],
+    tags: ['React', 'CSS'],
+    keyHighlights: [
+      'Developed a showcase website for Bits Innovation.',
+      'Created the frontend using React and CSS.',
+    ],
+    recording: {
+      title: 'Bits Innovation',
+      duration: 'Web Demo',
+      steps: [
+        {
+          title: 'Company Website Placeholder',
+          description:
+            'Video placeholder for the Bits Innovation website.',
+          visualType: 'web-browser',
+        },
+      ],
+    },
+  },
+],
+    // ==========================================================================
   // 💼 3. COMPREHENSIVE JOBS LIST ("WHAT I HAVE DONE")
   // ==========================================================================
   jobs: [
@@ -418,8 +707,59 @@ export const siteContent: PortfolioContent = {
         { label: 'GTM Strategy', value: 'Omnichannel' },
         { label: 'Operations', value: 'Supply Aligned' }
       ],
-      tags: ['Business Development', 'Go-To-Market', 'Distribution Channels', 'Inventory Planning', 'Vendor Relations', 'Retail Growth']
+      tags: [
+        'Business Development',
+        'Go-To-Market',
+        'Distribution Channels',
+        'Inventory Planning',
+        'Vendor Relations',
+        'Retail Growth'
+      ]
     },
+
+    {
+      id: 'connectex',
+      role: 'Senior Software Developer / Technical Business Analyst',
+      company: 'Connectex Inc.',
+      location: 'Calgary, AB, Canada',
+      period: 'July 2024 - March 2025',
+      category: 'Leadership & Tech',
+      badge: 'VPP Platform & Technical Analysis',
+      summary:
+        'Bridged product, engineering, and business teams on a Virtual Power Plant platform, combining software engineering, technical analysis, cloud architecture, operational reporting, and process improvement.',
+      bulletPoints: [
+        'Acted as the bridge between product managers, developers, and business stakeholders on the Virtual Power Plant (VPP) platform, supporting technical analysis, product enhancements, and operational improvements.',
+        'Gathered and analyzed business and technical requirements, translating stakeholder needs into functional specifications, technical documentation, and implementation plans.',
+        'Designed and developed dashboards and operational reporting tools to support monitoring, forecasting, and data-driven decision-making.',
+        'Created workflow diagrams, process documentation, and reporting structures to improve operational visibility and cross-team collaboration.',
+        'Applied Lean process improvement and Six Sigma principles to identify inefficiencies, reduce process gaps, and improve operational workflows.',
+        'Participated in Agile delivery processes including sprint planning, backlog refinement, stakeholder reviews, and release coordination.',
+        'Led and coordinated User Acceptance Testing (UAT) and System Integration Testing (SIT), including issue tracking, validation, and stakeholder reporting.',
+        'Worked on software and business systems initiatives involving Java, Spring Boot, React, SQL, and cloud-based solutions.',
+        'Supported implementation, user training, troubleshooting, and post-deployment optimization activities on cloud-based systems using AWS.',
+        'Designed and developed cloud infrastructure using AWS services including EC2, Lambda, Redshift, Cognito, and API Gateway.',
+        'Developed backend services using Adonis.js and supported high-volume data processing and real-time platform operations.',
+        'Designed and optimized SQL and MongoDB databases for high-performance storage, retrieval, reporting, and analytics.'
+      ],
+      keyMetrics: [
+        { label: 'Platform', value: 'Virtual Power Plant' },
+        { label: 'Cloud', value: 'AWS' },
+        { label: 'Delivery', value: 'UAT / SIT / Agile' }
+      ],
+      tags: [
+        'Technical Business Analysis',
+        'Java',
+        'Spring Boot',
+        'React',
+        'Vue.js',
+        'AWS',
+        'SQL',
+        'MongoDB',
+        'Process Improvement',
+        'UAT / SIT'
+      ]
+    },
+
     {
       id: 'dlytica',
       role: 'Academy Manager | Business Development & Operations',
@@ -444,8 +784,54 @@ export const siteContent: PortfolioContent = {
         { label: 'Visibility', value: 'CRM Driven' },
         { label: 'Team Leadership', value: 'Cross-functional' }
       ],
-      tags: ['Operations Management', 'Program Delivery', 'CRM Systems', 'Workforce Planning', 'Stakeholder Alignment']
+      tags: [
+        'Operations Management',
+        'Program Delivery',
+        'CRM Systems',
+        'Workforce Planning',
+        'Stakeholder Alignment'
+      ]
     },
+
+    {
+      id: 'simply-software',
+      role: 'Software Developer',
+      company: 'Simply Software Technology',
+      location: 'Kathmandu, Nepal',
+      period: 'June 2020 - May 2023',
+      category: 'Leadership & Tech',
+      badge: 'Full-Stack Software Development',
+      summary:
+        'Developed scalable web applications and enterprise systems across frontend, backend, APIs, databases, and responsive user experiences using modern Java and JavaScript technologies.',
+      bulletPoints: [
+        'Developed responsive user interfaces using Angular, React, HTML, and CSS, ensuring cross-browser compatibility and mobile responsiveness.',
+        'Built scalable web applications using Java, Spring Boot, and Hibernate, integrating frontend and backend components for reliable application performance.',
+        'Designed and developed RESTful APIs to enable seamless communication between frontend and backend systems.',
+        'Wrote optimized SQL queries for fast and accurate data retrieval while maintaining data integrity and consistency.',
+        'Integrated jQuery to implement dynamic form validation, event handling, animations, and enhanced website interactivity.',
+        'Developed and maintained enterprise and government-focused software systems requiring structured reporting, accounting, and data management.',
+        'Worked on the Integrated ICT company website using React and CSS, creating a responsive website whose presentation could adapt to changing content requirements.',
+        'Followed Agile development practices including sprint planning, daily standups, task tracking, and collaborative development.',
+        'Managed source control using Git and participated in code reviews to maintain clean, maintainable, and reliable code.'
+      ],
+      keyMetrics: [
+        { label: 'Backend', value: 'Java / Spring Boot' },
+        { label: 'Frontend', value: 'Angular / React' },
+        { label: 'Database', value: 'SQL' }
+      ],
+      tags: [
+        'Java',
+        'Spring Boot',
+        'Hibernate',
+        'Angular',
+        'React',
+        'REST APIs',
+        'SQL',
+        'Git',
+        'Agile'
+      ]
+    },
+
     {
       id: 'bagisha',
       role: 'Co-Founder & Business Development Officer',
@@ -454,25 +840,34 @@ export const siteContent: PortfolioContent = {
       period: 'December 2019 - Present',
       isCurrent: true,
       category: 'Ventures & BD',
-      badge: '100% Autopilot Self-Sustaining Venture',
+      badge: 'Study Space Venture',
       summary:
-        'Founded, structured, and scaled a premier study space enterprise from initial market validation into a profitable, recurring-revenue business running on automated autopilot.',
+        'Co-founded and developed a reading room focused on providing a peaceful, personalized, connected, and accessible environment for students, researchers, and readers.',
       bulletPoints: [
-        'Founded and scaled a study space business from initial concept and market validation to a fully operational, self-sustaining business model with streamlined processes and recurring revenue generation.',
-        'Led end-to-end business operations, including business planning, financial management, customer acquisition, facility operations, team coordination, and continuous process improvement.',
-        'Developed and implemented scalable operational systems, workflows, and automation processes to transition the business from founder-driven operations to an autopilot management model.',
-        'Defined growth strategies, revenue models, pricing structures, and customer engagement initiatives to increase occupancy, membership retention, and long-term profitability.',
-        'Managed business development activities by identifying market opportunities, building strategic partnerships, and establishing relationships with schools, colleges, coaching institutes, and local organizations.',
-        'Built and executed sales and marketing strategies across SEO, Google Ads, Meta Ads, social media campaigns, and community outreach to drive customer acquisition and brand growth.',
-        'Led technology adoption initiatives, including online booking, digital seat management, and customer management systems to improve operational efficiency.'
+        'Co-founded Bagisha Reading Room and developed the concept around creating a focused yet communal environment for students and readers.',
+        'Designed a personalized study experience allowing patrons to choose their preferred seating while maintaining an orderly environment for quiet study and contemplation.',
+        'Focused on customer experience by creating a safe, friendly, and welcoming space for students, researchers, and readers.',
+        'Provided high-speed internet to improve browsing, online learning, digital research, and access to electronic resources.',
+        'Managed business development, customer relationships, marketing initiatives, and operational activities.',
+        'Established Bagisha in the heart of Kathmandu to provide convenient access to a central study and reading environment.',
+        'Recognized as a finalist in Idea Studio Season 7, reflecting the venture’s innovative approach to improving reading culture and learning spaces.',
+        'Led technology adoption including online booking, digital seat management, and customer management systems.'
       ],
       keyMetrics: [
-        { label: 'Operating Model', value: '100% Autopilot' },
-        { label: 'Revenue Model', value: 'Recurring Subscriptions' },
-        { label: 'Digital Systems', value: 'Online Booking & CRM' }
+        { label: 'Location', value: 'Heart of Kathmandu' },
+        { label: 'Recognition', value: 'Idea Studio Season 7 Finalist' },
+        { label: 'Experience', value: 'Peaceful & Personalized' }
       ],
-      tags: ['Venture Founder', 'P&L Management', 'Autopilot Operations', 'Digital Marketing', 'Customer Lifecycle', 'SOP Development']
+      tags: [
+        'Business Development',
+        'Operations',
+        'Customer Experience',
+        'Digital Marketing',
+        'Online Booking',
+        'Venture Development'
+      ]
     },
+
     {
       id: 'microsoft',
       role: 'Microsoft Student Partner',
@@ -494,8 +889,14 @@ export const siteContent: PortfolioContent = {
         { label: 'Outreach', value: 'Hour of Code' },
         { label: 'Ecosystem', value: 'University Tech Hub' }
       ],
-      tags: ['Tech Evangelism', 'Community Outreach', 'Partner Relations', 'Public Speaking']
+      tags: [
+        'Tech Evangelism',
+        'Community Outreach',
+        'Partner Relations',
+        'Public Speaking'
+      ]
     },
+
     {
       id: 'hult-prize',
       role: 'Event Operations Committee Member',
@@ -516,8 +917,14 @@ export const siteContent: PortfolioContent = {
         { label: 'Initiative', value: 'Clinton Global Partner' },
         { label: 'Partnerships', value: 'Corporate Sponsorships' }
       ],
-      tags: ['Social Entrepreneurship', 'Event Operations', 'Sponsorship Management', 'Logistics Planning']
+      tags: [
+        'Social Entrepreneurship',
+        'Event Operations',
+        'Sponsorship Management',
+        'Logistics Planning'
+      ]
     },
+
     {
       id: 'it-meet',
       role: 'Business Development, Sponsorship & Operations Lead',
@@ -538,8 +945,14 @@ export const siteContent: PortfolioContent = {
         { label: 'Scale', value: 'Annual Convention' },
         { label: 'Funding', value: 'Commercial Pipeline' }
       ],
-      tags: ['Sponsorship Acquisition', 'Financial Planning', 'Vendor Coordination', 'Audience Engagement']
+      tags: [
+        'Sponsorship Acquisition',
+        'Financial Planning',
+        'Vendor Coordination',
+        'Audience Engagement'
+      ]
     },
+
     {
       id: 'world-wood-day',
       role: 'Event Operations & International Relations Volunteer',
@@ -560,10 +973,13 @@ export const siteContent: PortfolioContent = {
         { label: 'Audience', value: 'Global Delegates' },
         { label: 'Focus', value: 'Exhibition Logistics' }
       ],
-      tags: ['International Relations', 'Event Logistics', 'Stakeholder Support']
+      tags: [
+        'International Relations',
+        'Event Logistics',
+        'Stakeholder Support'
+      ]
     }
   ],
-
   // ==========================================================================
   // 🛠️ 4. ENGINEERING STACK - ONLY ICONS WITH CLEAN HOVER DETAILS
   // ==========================================================================
