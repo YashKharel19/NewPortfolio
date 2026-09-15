@@ -193,13 +193,6 @@ export const AnimatedTechStack = () => {
           </motion.div>
         )}
 
-        {/* Quick customization tip for Yash */}
-        <div className="mt-8 text-center">
-          <span className="text-xs text-slate-600 font-medium">
-            To add, remove or change tech icons &bull; simply edit the list in <code className="text-orange-700 font-mono text-xs">src/content.ts</code>
-          </span>
-        </div>
-
       </div>
     </section>
   );
