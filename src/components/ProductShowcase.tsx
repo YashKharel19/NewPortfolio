@@ -1,20 +1,12 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Smartphone, 
-  ExternalLink, 
-  Sparkles, 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Volume2, 
-  CheckCircle2, 
-  Layers, 
-  ShoppingBag, 
-  Laptop, 
-  ShieldCheck,
-  Languages,
-  Maximize2
+import {
+  Smartphone,
+  ExternalLink,
+  Sparkles,
+  Play,
+  Pause,
+  CheckCircle2,
 } from 'lucide-react';
 import { siteContent, ProductItem } from '../content';
 import { playClickSound, playMilestoneSound, playAchievementSound } from '../utils/soundEffects';
@@ -79,8 +71,6 @@ const handleVideoEnded = () => {
 };
   
 
-  const currentStep = activeProduct.recording.steps[activeStepIndex] || activeProduct.recording.steps[0];
-
   return (
     <section id="projects" className="py-20 bg-gradient-to-b from-white via-orange-50/20 to-white relative overflow-hidden border-b border-orange-100">
       {/* Background Animated Blobs in Orange, Green, and Bluish */}
@@ -94,7 +84,7 @@ const handleVideoEnded = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 text-orange-950 border border-orange-200 text-xs font-bold mb-3 shadow-xs">
             <Smartphone className="w-3.5 h-3.5 text-orange-600" />
-            <span>Products, Apps &amp; Screen Recordings</span>
+            <span>Products, Apps &amp; Interactive Demos</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Featured Products &amp;{' '}
@@ -103,7 +93,7 @@ const handleVideoEnded = () => {
             </span>
           </h2>
           <p className="text-slate-600 text-base mt-2">
-            Inspect live products, browse store releases, and watch interactive screen walkthroughs.
+            Explore live products, browse store releases, and watch real product demos.
           </p>
 
           {/* Product Switcher Tabs with Custom Colors for Bagisha & Lumasha */}
@@ -150,15 +140,7 @@ const handleVideoEnded = () => {
                       Live App
                     </span>
                   )}
-                  {isBagisha && (
-                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold border ${
-                      isSelected 
-                        ? 'bg-white/20 text-white border-white/30' 
-                        : 'bg-orange-500/20 text-orange-950 border-orange-500/30'
-                    }`}>
-                      Autopilot
-                    </span>
-                  )}
+                 
                 </button>
               );
             })}
