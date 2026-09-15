@@ -139,8 +139,8 @@ products: [
     category: 'Ventures',
     badge: 'Live Product',
     photo: lumashaPhoto,
-    playStoreUrl: 'https://play.google.com/',
-    appStoreUrl: 'https://www.apple.com/app-store/',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.yash048.lumasha',
+    appStoreUrl: 'https://apps.apple.com/ca/app/lumasha/id6749781997',
     websiteUrl: 'https://lumasha.com/',
     metrics: [
       'Nepali language learning',
@@ -990,7 +990,7 @@ products: [
       category: 'Core',
       color: '#EA580C',
       bgGlow: 'rgba(234, 88, 12, 0.15)',
-      iconName: 'Server'
+      iconName: 'Java'
     },
     {
       id: 'angular',
@@ -998,7 +998,7 @@ products: [
       category: 'Frontend',
       color: '#E11D48',
       bgGlow: 'rgba(225, 29, 72, 0.15)',
-      iconName: 'Layers'
+      iconName: 'Angular'
     },
     {
       id: 'react',
@@ -1006,7 +1006,7 @@ products: [
       category: 'Frontend',
       color: '#0891B2',
       bgGlow: 'rgba(8, 145, 178, 0.15)',
-      iconName: 'Smartphone'
+      iconName: 'React'
     },
     {
       id: 'typescript',
@@ -1022,7 +1022,7 @@ products: [
       category: 'Backend',
       color: '#059669',
       bgGlow: 'rgba(5, 150, 105, 0.15)',
-      iconName: 'Terminal'
+      iconName: 'Python'
     },
     {
       id: 'sql',
