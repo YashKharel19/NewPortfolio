@@ -458,15 +458,7 @@ export const ProductShowcase = () => {
 
             </div>
 
-            {/* Quick Helper Banner */}
-            <div className="p-3.5 rounded-2xl bg-white border border-orange-100 shadow-xs flex items-center justify-between text-xs text-slate-600">
-              <span className="font-medium">
-                Want to change this product demo or add videos?
-              </span>
-              <span className="font-bold text-orange-700">
-                Edit <code>src/content.ts</code>
-              </span>
-            </div>
+            
 
           </motion.div>
 
