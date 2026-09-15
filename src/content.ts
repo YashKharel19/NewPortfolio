@@ -321,18 +321,7 @@ products: [
       'Financial Reporting System for the Office of the Auditor General, Nepal.',
       'Developed enterprise reporting functionality using Angular and Java.',
     ],
-    recording: {
-      title: 'OAG REPORT',
-      duration: 'Project Placeholder',
-      steps: [
-        {
-          title: 'Confidential Project',
-          description:
-            'Video placeholder. Project details are limited due to confidentiality.',
-          visualType: 'web-browser',
-        },
-      ],
-    },
+  
   },
 
   {
@@ -349,18 +338,7 @@ products: [
       'Developed a reporting system for the Financial Comptroller General Office.',
       'Worked on Angular and Java-based enterprise reporting functionality.',
     ],
-    recording: {
-      title: 'MALEPA REPORT',
-      duration: 'Project Placeholder',
-      steps: [
-        {
-          title: 'Confidential Project',
-          description:
-            'Video placeholder. Project details are limited due to confidentiality.',
-          visualType: 'web-browser',
-        },
-      ],
-    },
+   
   },
 
   {
