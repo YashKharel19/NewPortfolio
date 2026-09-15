@@ -82,17 +82,17 @@ export const JobsList = ({ onOpenResume }: JobsListProps) => {
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-900 border border-emerald-200 text-xs font-bold mb-3 shadow-xs">
             <GitCommit className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Chronological Career Timeline</span>
+            <span>Career Progression & Milestones</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
-            <span>Jobs</span>{' '}
+            <span>Experience</span>{' '}
             <span className="text-orange-600">&amp;</span>{' '}
-            <span className="text-emerald-700">What I Have Done</span>
+            <span className="text-emerald-700">Impact</span>
           </h2>
 
           <p className="text-slate-600 text-sm sm:text-base mt-2.5 max-w-2xl mx-auto">
-            Interactive career overview: explore job titles in the left panel and detailed deliverables with what I have accomplished in the right panel.
+            Comprehensive dual-panel timeline detailing leadership, software engineering, and technical accomplishments.
           </p>
 
           {/* Quick Stats Banner */}
@@ -102,7 +102,7 @@ export const JobsList = ({ onOpenResume }: JobsListProps) => {
               <div className="text-[11px] font-semibold text-slate-500">Timeline Scope</div>
             </div>
             <div className="p-3 rounded-2xl bg-white border border-orange-200 shadow-xs text-center">
-              <div className="text-lg sm:text-xl font-black text-orange-600">100% Autopilot</div>
+              <div className="text-lg sm:text-xl font-black text-orange-600">Ideation to Self Sustaining</div>
               <div className="text-[11px] font-semibold text-slate-500">Bagisha Venture</div>
             </div>
             <div className="p-3 rounded-2xl bg-white border border-emerald-200 shadow-xs text-center">
