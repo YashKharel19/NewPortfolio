@@ -277,7 +277,7 @@ products: [
       'Focused on presenting work through a clean and responsive web experience.',
     ],
     video: {
-      src: ojaswiaVideo,
+      src: ojaswiVideo,
       title: 'Lumasha App Demo',
       description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
       poster: ojaswiPhoto,
