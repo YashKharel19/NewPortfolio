@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Smartphone, 
@@ -22,52 +22,62 @@ import { playClickSound, playMilestoneSound, playAchievementSound } from '../uti
 export const ProductShowcase = () => {
   const { products } = siteContent;
   const [selectedProductId, setSelectedProductId] = useState<string>(products[0].id);
-  const [activeStepIndex, setActiveStepIndex] = useState<number>(0);
-  const [isPlayingRecording, setIsPlayingRecording] = useState<boolean>(true);
-  const [recordingProgress, setRecordingProgress] = useState<number>(35);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [videoProgress, setVideoProgress] = useState(0);
   const [isPlayingAudioChime, setIsPlayingAudioChime] = useState<boolean>(false);
 
   const activeProduct: ProductItem = products.find((p) => p.id === selectedProductId) || products[0];
 
-  // Auto-advance simulated recording steps when playing
-  useEffect(() => {
-    if (!isPlayingRecording) return;
-    const interval = setInterval(() => {
-      setRecordingProgress((prev) => {
-        if (prev >= 100) {
-          setActiveStepIndex((stepPrev) => (stepPrev + 1) % activeProduct.recording.steps.length);
-          return 0;
-        }
-        return prev + 5;
-      });
-    }, 400);
-
-    return () => clearInterval(interval);
-  }, [isPlayingRecording, activeProduct.recording.steps.length]);
 
   const handleSelectProduct = (productId: string) => {
-    playClickSound();
-    setSelectedProductId(productId);
-    setActiveStepIndex(0);
-    setRecordingProgress(0);
-  };
+   playClickSound();
+   if (videoRef.current) {
+    videoRef.current.pause();
+    videoRef.current.currentTime = 0;
+   }
+   setIsVideoPlaying(false);
+   setVideoProgress(0);
+   setSelectedProductId(productId);
+ };
+ const handleToggleVideo = async () => {
+  playClickSound();
 
-  const handleTogglePlay = () => {
-    playClickSound();
-    setIsPlayingRecording(!isPlayingRecording);
-  };
+  const video = videoRef.current;
 
-  const handleStepClick = (idx: number) => {
-    playClickSound();
-    setActiveStepIndex(idx);
-    setRecordingProgress(0);
-  };
+  if (!video) return;
 
-  const handlePlayAudio = () => {
-    playAchievementSound();
-    setIsPlayingAudioChime(true);
-    setTimeout(() => setIsPlayingAudioChime(false), 2000);
-  };
+  try {
+    if (video.paused) {
+      await video.play();
+    } else {
+      video.pause();
+    }
+  } catch (error) {
+    console.error('Unable to play video:', error);
+  }
+};
+const handleVideoTimeUpdate = () => {
+  const video = videoRef.current;
+
+  if (!video || !video.duration) return;
+
+  setVideoProgress((video.currentTime / video.duration) * 100);
+};
+
+const handleVideoPlay = () => {
+  setIsVideoPlaying(true);
+};
+
+const handleVideoPause = () => {
+  setIsVideoPlaying(false);
+};
+
+const handleVideoEnded = () => {
+  setIsVideoPlaying(false);
+  setVideoProgress(100);
+};
+  
 
   const currentStep = activeProduct.recording.steps[activeStepIndex] || activeProduct.recording.steps[0];
 
@@ -275,192 +285,139 @@ export const ProductShowcase = () => {
           </motion.div>
 
           {/* Right Column: Interactive Video / Screen Recording Simulator */}
-          <motion.div
-            key={`recording-${activeProduct.id}`}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
-            className="lg:col-span-6 space-y-4"
+          {/* Right Column: Real Product Video */}
+<motion.div
+  key={`video-${activeProduct.id}`}
+  initial={{ opacity: 0, x: 20 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.4 }}
+  className="lg:col-span-6 space-y-4"
+>
+  <div className="bg-slate-900 rounded-3xl p-5 sm:p-7 text-white shadow-2xl border border-slate-800 relative overflow-hidden">
+
+    {/* Video Header */}
+    <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+      <div className="flex items-center gap-2 min-w-0">
+        <div className="flex gap-1.5 shrink-0">
+          <span className="w-3 h-3 rounded-full bg-red-500 inline-block" />
+          <span className="w-3 h-3 rounded-full bg-amber-500 inline-block" />
+          <span className="w-3 h-3 rounded-full bg-emerald-500 inline-block" />
+        </div>
+
+        <span className="text-xs text-slate-400 font-mono ml-2 truncate">
+          {activeProduct.video?.title || `${activeProduct.title} — Video Demo`}
+        </span>
+      </div>
+
+      <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-bold shrink-0">
+        <Play className="w-3 h-3" />
+        <span>VIDEO</span>
+      </div>
+    </div>
+
+    {/* Actual Video / Placeholder */}
+    <div className="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden relative aspect-video">
+
+      {activeProduct.video?.src ? (
+        <>
+          <video
+            ref={videoRef}
+            key={activeProduct.video.src}
+            src={activeProduct.video.src}
+            poster={activeProduct.video.poster || activeProduct.photo}
+            className="w-full h-full object-contain bg-black"
+            playsInline
+            preload="metadata"
+            onPlay={handleVideoPlay}
+            onPause={handleVideoPause}
+            onTimeUpdate={handleVideoTimeUpdate}
+            onEnded={handleVideoEnded}
+          />
+
+          {/* Video Overlay Play Button */}
+          {!isVideoPlaying && (
+            <button
+              onClick={handleToggleVideo}
+              className="absolute inset-0 flex items-center justify-center bg-slate-950/20 hover:bg-slate-950/30 transition-all cursor-pointer"
+              aria-label="Play video"
+            >
+              <span className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-r from-orange-500 to-emerald-500 flex items-center justify-center shadow-2xl shadow-orange-500/30 hover:scale-110 transition-transform">
+                <Play className="w-7 h-7 sm:w-8 sm:h-8 text-white fill-white ml-1" />
+              </span>
+            </button>
+          )}
+        </>
+      ) : (
+        /* Video Placeholder */
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950/40">
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500/20 to-emerald-500/20 border border-slate-700 flex items-center justify-center mb-4">
+            <Play className="w-7 h-7 text-orange-400" />
+          </div>
+
+          <h4 className="text-base sm:text-lg font-bold text-white">
+            Video Placeholder
+          </h4>
+
+          <p className="text-xs sm:text-sm text-slate-400 max-w-sm mt-2 leading-relaxed">
+            {activeProduct.video?.description ||
+              'A product walkthrough video will be added here.'}
+          </p>
+
+          <span className="mt-4 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+            Coming Soon
+          </span>
+        </div>
+      )}
+    </div>
+
+    {/* Video Description */}
+    {activeProduct.video?.description && (
+      <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mt-4">
+        {activeProduct.video.description}
+      </p>
+    )}
+
+    {/* Video Controls */}
+    {activeProduct.video?.src && (
+      <div className="mt-4 pt-3 border-t border-slate-800">
+
+        <div className="flex items-center gap-3">
+
+          {/* Play / Pause */}
+          <button
+            onClick={handleToggleVideo}
+            className="p-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-emerald-500 hover:from-orange-400 hover:to-emerald-400 text-slate-950 transition-all shadow-sm cursor-pointer active:scale-95"
+            title={isVideoPlaying ? 'Pause video' : 'Play video'}
+            aria-label={isVideoPlaying ? 'Pause video' : 'Play video'}
           >
-            {/* Screen Recording Device Window */}
-            <div className="bg-slate-900 rounded-3xl p-5 sm:p-7 text-white shadow-2xl border border-slate-800 relative overflow-hidden">
-              
-              {/* Window Header with Video Recording Badge */}
-              <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="flex gap-1.5">
-                    <span className="w-3 h-3 rounded-full bg-red-500 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-amber-500 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-emerald-500 inline-block" />
-                  </div>
-                  <span className="text-xs text-slate-400 font-mono ml-2 truncate">
-                    {activeProduct.recording.title}
-                  </span>
-                </div>
+            {isVideoPlaying ? (
+              <Pause className="w-4 h-4" />
+            ) : (
+              <Play className="w-4 h-4" />
+            )}
+          </button>
 
-                {/* Blinking Recording Beacon */}
-                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/40 text-red-400 text-xs font-bold">
-                  <span className="w-2 h-2 rounded-full bg-red-500 animate-recording-dot" />
-                  <span>SCREEN DEMO</span>
-                </div>
-              </div>
-
-              {/* Active Screen Walkthrough Viewport */}
-              <div className="bg-slate-950 rounded-2xl p-5 border border-slate-800/80 min-h-[290px] flex flex-col justify-between relative overflow-hidden">
-                
-                {/* Visual Type 1: Flashcards & Audio (Lumasha) */}
-                {currentStep.visualType === 'flashcards' && (
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-mono text-orange-400 font-bold bg-orange-950/60 px-2.5 py-1 rounded-md border border-orange-800">
-                        {currentStep.badgeText}
-                      </span>
-                      <span className="text-xs text-slate-400 font-mono">
-                        Screen {activeStepIndex + 1} of {activeProduct.recording.steps.length}
-                      </span>
-                    </div>
-
-                    <div className="bg-gradient-to-br from-slate-900 via-orange-950/30 to-blue-950/30 p-5 rounded-2xl border border-orange-700/40 text-center relative group">
-                      <div className="text-3xl sm:text-4xl font-black text-orange-300">
-                        नमस्ते (Namaste)
-                      </div>
-                      <div className="text-sm font-mono text-emerald-200 mt-1">
-                        &ldquo;I honor the light in you&rdquo;
-                      </div>
-                      <div className="text-xs text-slate-400 mt-2">
-                        Heritage Module &bull; Nepali &bull; Audio Waveform Active
-                      </div>
-
-                      {/* Interactive Audio Button */}
-                      <button
-                        onClick={handlePlayAudio}
-                        className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-orange-500 to-emerald-500 hover:from-orange-400 hover:to-emerald-400 text-slate-950 font-bold text-xs transition-transform active:scale-95 shadow-md shadow-orange-500/20"
-                      >
-                        <Volume2 className={`w-4 h-4 ${isPlayingAudioChime ? 'animate-bounce' : ''}`} />
-                        <span>{isPlayingAudioChime ? 'Playing Audio...' : 'Play Audio Pronunciation'}</span>
-                      </button>
-                    </div>
-
-                    <p className="text-xs text-slate-300 leading-relaxed">
-                      {currentStep.description}
-                    </p>
-                  </div>
-                )}
-
-                {/* Visual Type 2: Seat Matrix (Bagisha) */}
-                {currentStep.visualType === 'seat-matrix' && (
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-mono text-blue-400 font-bold bg-blue-950/60 px-2.5 py-1 rounded-md border border-blue-800">
-                        {currentStep.badgeText}
-                      </span>
-                      <span className="text-xs text-slate-400 font-mono">
-                        Autopilot Engine Live
-                      </span>
-                    </div>
-
-                    {/* Interactive Seat Matrix Visualization */}
-                    <div className="bg-slate-900/90 p-4 rounded-2xl border border-blue-800/40">
-                      <div className="text-xs font-bold text-blue-300 mb-2 flex items-center justify-between">
-                        <span>Sanctuary Desk Capacity</span>
-                        <span className="text-emerald-400">92% Occupancy</span>
-                      </div>
-                      <div className="grid grid-cols-6 gap-2">
-                        {Array.from({ length: 18 }).map((_, i) => (
-                          <div
-                            key={i}
-                            className={`h-6 rounded-md flex items-center justify-center text-[10px] font-bold ${
-                              i % 5 === 0
-                                ? 'bg-emerald-500 text-slate-950'
-                                : 'bg-slate-800 text-cyan-200 border border-slate-700'
-                            }`}
-                          >
-                            D{i + 1}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <p className="text-xs text-slate-300 leading-relaxed">
-                      {currentStep.description}
-                    </p>
-                  </div>
-                )}
-
-                {/* Visual Type 3: Web Browser (Websites) */}
-                {currentStep.visualType === 'web-browser' && (
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-mono text-emerald-400 font-bold bg-emerald-950/60 px-2.5 py-1 rounded-md border border-emerald-800">
-                        {currentStep.badgeText}
-                      </span>
-                      <span className="text-xs text-slate-400 font-mono">
-                        kharelyash.com.np
-                      </span>
-                    </div>
-
-                    <div className="bg-slate-900 p-4 rounded-2xl border border-emerald-700/40 space-y-2">
-                      <div className="text-xs font-mono text-slate-300 bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-800">
-                        https://kharelyash.com.np/portfolio
-                      </div>
-                      <div className="p-3 rounded-lg bg-emerald-950/40 border border-emerald-800/40 text-xs text-emerald-200">
-                        ⚡ Sub-second load speed &bull; Responsive CSS animations &bull; Direct recruiter pipeline
-                      </div>
-                    </div>
-
-                    <p className="text-xs text-slate-300 leading-relaxed">
-                      {currentStep.description}
-                    </p>
-                  </div>
-                )}
-
-                {/* Step Headline in Viewport */}
-                <div className="pt-3 border-t border-slate-900 flex items-center justify-between text-xs text-slate-400">
-                  <span className="font-semibold text-white">{currentStep.title}</span>
-                  <span>{activeProduct.recording.duration}</span>
-                </div>
-              </div>
-
-              {/* Video Player Control Bar with Orange-Green-Bluish Scrubber */}
-              <div className="mt-4 pt-3 border-t border-slate-800 flex items-center gap-3">
-                <button
-                  onClick={handleTogglePlay}
-                  className="p-2 rounded-xl bg-gradient-to-r from-orange-500 to-emerald-500 hover:from-orange-400 hover:to-emerald-400 text-slate-950 transition-colors shadow-sm cursor-pointer"
-                  title={isPlayingRecording ? 'Pause recording' : 'Play recording'}
-                >
-                  {isPlayingRecording ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-                </button>
-
-                {/* Progress Scrubber in Tri-Color */}
-                <div className="flex-1">
-                  <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-gradient-to-r from-orange-400 via-emerald-400 to-blue-400 rounded-full transition-all duration-300"
-                      style={{ width: `${recordingProgress}%` }}
-                    />
-                  </div>
-                </div>
-
-                {/* Step Indicators */}
-                <div className="flex gap-1.5">
-                  {activeProduct.recording.steps.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => handleStepClick(idx)}
-                      className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
-                        idx === activeStepIndex ? 'bg-orange-400 scale-125' : 'bg-slate-700 hover:bg-slate-500'
-                      }`}
-                      title={`Step ${idx + 1}`}
-                    />
-                  ))}
-                </div>
-              </div>
-
+          {/* Progress */}
+          <div className="flex-1">
+            <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-gradient-to-r from-orange-400 via-emerald-400 to-blue-400 rounded-full transition-all duration-150"
+                style={{ width: `${videoProgress}%` }}
+              />
             </div>
+          </div>
 
-            
+          {/* Status */}
+          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider min-w-[45px] text-right">
+            {isVideoPlaying ? 'Playing' : 'Paused'}
+          </span>
+        </div>
 
-          </motion.div>
+      </div>
+    )}
+
+  </div>
+</motion.div>
 
         </div>
 
