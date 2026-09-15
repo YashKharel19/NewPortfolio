@@ -68,18 +68,18 @@ export const AnimatedTechStack = () => {
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 text-orange-950 border border-orange-200 text-xs font-bold mb-3 shadow-xs">
             <Zap className="w-3.5 h-3.5 text-orange-600" />
-            <span>Engineering Stacks &bull; Interactive Icons</span>
+            <span>Engineering Stacks</span>
           </div>
           
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Engineering &amp;{' '}
             <span className="text-emerald-700">
-              Technology Stacks
+              Technology Matrix
             </span>
           </h2>
 
           <p className="text-slate-600 text-sm sm:text-base mt-2">
-            Tactile, animated technology matrix. Click or hover any icon for interactive feedback.
+            Selected engineering toolkits and languages leveraged across high-throughput production services.
           </p>
 
           {/* Interactive Category Filter Pills */}
