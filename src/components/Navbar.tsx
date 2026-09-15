@@ -158,7 +158,7 @@ export const Navbar = ({ onOpenResume, onOpenContact }: NavbarProps) => {
               <Linkedin className="w-4 h-4" />
             </a>
             <a
-              href="https://github.com/yash048"
+              href="https://github.com/YashKharel19"
               target="_blank"
               rel="noreferrer"
               onClick={playClickSound}
