@@ -36,7 +36,7 @@ export const Footer = ({ onOpenResume }: FooterProps) => {
           {/* Quick Links */}
           <div className="flex flex-wrap items-center justify-center gap-5 text-xs font-semibold">
             <a href="#overview" onClick={playClickSound} className="hover:text-orange-400 transition-colors">Overview</a>
-            <a href="#projects" onClick={playClickSound} className="text-orange-400 hover:text-orange-300 font-bold transition-colors">Products &amp; Videos</a>
+            <a href="#projects" onClick={playClickSound} className="text-orange-400 hover:text-orange-300 font-bold transition-colors">Products</a>
             <a href="#tech-stack" onClick={playClickSound} className="hover:text-emerald-400 transition-colors">Tech Stack</a>
             <a href="#jobs" onClick={playClickSound} className="hover:text-blue-400 transition-colors">Jobs Timeline</a>
             <a href="#education" onClick={playClickSound} className="hover:text-orange-400 transition-colors">Education</a>
@@ -64,7 +64,7 @@ export const Footer = ({ onOpenResume }: FooterProps) => {
         {/* Bottom Row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-xs text-slate-400">
           <div>
-            <span>&copy; {new Date().getFullYear()} Yash Kharel. Revamped in React with Orange, Green, and Bluish Design.</span>
+            <span>&copy; {new Date().getFullYear()} Yash Kharel. Revamped in React</span>
           </div>
 
           <div className="flex items-center gap-4">
