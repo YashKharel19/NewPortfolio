@@ -32,16 +32,13 @@ export interface ProductItem {
   metrics: { label: string; value: string }[];
   tags: string[];
   keyHighlights: string[];
-  // Interactive simulated video / recording details
-  recording: {
+  // Real product video — optional
+  // If no video exists, ProductShowcase automatically shows a placeholder.
+  video?: {
+    src: string;
     title: string;
-    duration: string;
-    steps: {
-      title: string;
-      description: string;
-      badgeText: string;
-      visualType: 'flashcards' | 'seat-matrix' | 'web-browser' | 'terminal';
-    }[];
+    description?: string;
+    poster?: string;
   };
 }
 
@@ -143,7 +140,7 @@ products: [
     appStoreUrl: 'https://apps.apple.com/ca/app/lumasha/id6749781997',
     websiteUrl: 'https://lumasha.com/',
     metrics: [
-      'Nepali language learning',
+      'Multiple language learning',
       'Interactive flashcards',
       'Cultural learning for children',
     ],
@@ -153,24 +150,12 @@ products: [
       'Designed interactive flashcards and audio-based learning experiences.',
       'Developed and prepared the application for Android and iOS distribution.',
     ],
-    recording: {
-      title: 'Lumasha App — Product Walkthrough',
-      duration: 'Video Review',
-      steps: [
-        {
-          title: 'Video Placeholder — App Demo',
-          description:
-            'Video placeholder for the Lumasha mobile app walkthrough and product demonstration.',
-          visualType: 'flashcards',
-        },
-        {
-          title: 'Video Placeholder — App Review',
-          description:
-            'Video placeholder for the second Lumasha app review and feature walkthrough.',
-          visualType: 'flashcards',
-        },
-      ],
-    },
+    video: {
+    src: '/videos/lumasha-app.mp4',
+    title: 'Lumasha App Demo',
+    description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
+    poster: lumashaPhoto,
+  },
   },
 
   {
@@ -193,17 +178,11 @@ products: [
       'Created a product-focused experience for educational and cultural products.',
       'Integrated frontend, backend, database and email functionality.',
     ],
-    recording: {
-      title: 'Lumasha Website — Walkthrough',
-      duration: 'Web Demo',
-      steps: [
-        {
-          title: 'Website Placeholder',
-          description:
-            'Video placeholder for the Lumasha ecommerce website walkthrough.',
-          visualType: 'web-browser',
-        },
-      ],
+    video: {
+    src: '/videos/lumasha-app.mp4',
+    title: 'Lumasha App Demo',
+    description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
+    poster: lumashaPhoto,
     },
   },
 
@@ -230,18 +209,13 @@ products: [
       'Located in the heart of Kathmandu for students, researchers and readers.',
       'Recognized as an Idea Studio Season 7 Finalist for its innovative approach and commitment to reading culture.',
     ],
-    recording: {
-      title: 'Bagisha — Space & Experience',
-      duration: 'Video Placeholder',
-      steps: [
-        {
-          title: 'Reading Room Experience',
-          description:
-            'Video placeholder showcasing the Bagisha Reading Room environment, study spaces and overall experience.',
-          visualType: 'web-browser',
-        },
-      ],
-    },
+   video: {
+    src: '/videos/lumasha-app.mp4',
+    title: 'Lumasha App Demo',
+    description:
+      'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
+    poster: lumashaPhoto,
+  },
   },
 
   {
@@ -276,52 +250,13 @@ products: [
       'Applied Lean and Six Sigma principles to identify process gaps and improve operational efficiency.',
       'Supported implementation, training, troubleshooting and post-deployment optimization.',
     ],
-    recording: {
-      title: 'Connectex VPP — Platform Walkthrough',
-      duration: 'Video Placeholder',
-      steps: [
-        {
-          title: 'VPP Dashboard Placeholder',
-          description:
-            'Video placeholder for the Virtual Power Plant dashboard and operational workflow.',
-          visualType: 'web-browser',
-        },
-      ],
+    video: {
+      src: '/videos/lumasha-app.mp4',
+      title: 'Lumasha App Demo',
+      description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
+      poster: lumashaPhoto,
     },
   },
-
-  {
-    id: 'ecommerce-website',
-    title: 'Ecommerce Website',
-    subtitle: 'Web Project',
-    tagline: 'Ecommerce for a startup',
-    category: 'Mobile & Web',
-    badge: 'Web Project',
-    photo: lumashaPhoto,
-    websiteUrl: 'https://lumasha.com/',
-    metrics: [
-      'Startup ecommerce platform',
-      'Product-focused storefront',
-    ],
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Heroku', 'Resend'],
-    keyHighlights: [
-      'Developed an ecommerce platform for a startup.',
-      'Connected frontend, backend, database and email services.',
-    ],
-    recording: {
-      title: 'Ecommerce Website',
-      duration: 'Web Demo',
-      steps: [
-        {
-          title: 'Ecommerce Placeholder',
-          description:
-            'Video placeholder for the ecommerce website and shopping experience.',
-          visualType: 'web-browser',
-        },
-      ],
-    },
-  },
-
   {
     id: 'personal-portfolio',
     title: 'Personal Portfolio',
@@ -337,17 +272,11 @@ products: [
       'Designed and developed a personal portfolio website for an interior designer.',
       'Focused on presenting work through a clean and responsive web experience.',
     ],
-    recording: {
-      title: 'Personal Portfolio',
-      duration: 'Web Demo',
-      steps: [
-        {
-          title: 'Portfolio Placeholder',
-          description:
-            'Video placeholder for the personal portfolio website.',
-          visualType: 'web-browser',
-        },
-      ],
+    video: {
+      src: '/videos/lumasha-app.mp4',
+      title: 'Lumasha App Demo',
+      description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
+      poster: lumashaPhoto,
     },
   },
 
@@ -366,17 +295,11 @@ products: [
       'Developed the official website for Dalit Liberation Front of Nepal.',
       'Built the frontend using Angular and responsive styling.',
     ],
-    recording: {
-      title: 'DLFN Website',
-      duration: 'Web Demo',
-      steps: [
-        {
-          title: 'Website Placeholder',
-          description:
-            'Video placeholder for the DLFN website.',
-          visualType: 'web-browser',
-        },
-      ],
+    video: {
+      src: '/videos/lumasha-app.mp4',
+      title: 'Lumasha App Demo',
+      description:'A walkthrough of the Lumasha language learning app, including interactive flashcards and learning experiences.',
+      poster: lumashaPhoto,
     },
   },
 
@@ -450,18 +373,7 @@ products: [
       'Centralized Accounting System for the Ministry of Foreign Affairs, Nepal.',
       'Developed enterprise accounting functionality using Angular and Java.',
     ],
-    recording: {
-      title: 'CAS',
-      duration: 'Project Placeholder',
-      steps: [
-        {
-          title: 'Confidential Project',
-          description:
-            'Video placeholder. Project details are limited due to confidentiality.',
-          visualType: 'web-browser',
-        },
-      ],
-    },
+    
   },
 
   {
@@ -483,18 +395,7 @@ products: [
       'Supported accounting and financial reporting workflows within a government enterprise environment.',
       'Built and maintained frontend functionality using Angular and backend functionality using Java.',
     ],
-    recording: {
-      title: 'CGAS',
-      duration: 'Project Placeholder',
-      steps: [
-        {
-          title: 'Government System Placeholder',
-          description:
-            'Video placeholder for CGAS. Detailed project screens are not publicly displayed.',
-          visualType: 'web-browser',
-        },
-      ],
-    },
+    
   },
 
   {
@@ -511,18 +412,7 @@ products: [
       'Revenue, Accounting & Financial Reporting System for the Ministry of Foreign Affairs.',
       'Worked on enterprise financial workflows and reporting functionality.',
     ],
-    recording: {
-      title: 'RAFR System',
-      duration: 'Project Placeholder',
-      steps: [
-        {
-          title: 'Confidential Project',
-          description:
-            'Video placeholder. Project details are limited due to confidentiality.',
-          visualType: 'web-browser',
-        },
-      ],
-    },
+    
   },
 
   {
@@ -540,18 +430,7 @@ products: [
       'Generated new files through a .NET Core API.',
       'Developed the frontend experience using React.',
     ],
-    recording: {
-      title: 'License Module',
-      duration: 'Project Placeholder',
-      steps: [
-        {
-          title: 'Module Placeholder',
-          description:
-            'Video placeholder for the file upload and document generation workflow.',
-          visualType: 'web-browser',
-        },
-      ],
-    },
+    
   },
 
   {
@@ -575,18 +454,7 @@ products: [
       'Created a flexible website design that could adapt to the company content and business requirements.',
       'Worked on responsive frontend development using React and CSS.',
     ],
-    recording: {
-      title: 'Integrated ICT — Website Walkthrough',
-      duration: 'Web Demo',
-      steps: [
-        {
-          title: 'Company Website Placeholder',
-          description:
-            'Video placeholder for the Integrated ICT website and responsive interface.',
-          visualType: 'web-browser',
-        },
-      ],
-    },
+    
   },
 
   {
@@ -605,18 +473,7 @@ products: [
       'Designed the website according to company content and requirements.',
       'Built the frontend using React and CSS.',
     ],
-    recording: {
-      title: 'Semantro Website',
-      duration: 'Web Demo',
-      steps: [
-        {
-          title: 'Website Placeholder',
-          description:
-            'Video placeholder for the Semantro corporate website.',
-          visualType: 'web-browser',
-        },
-      ],
-    },
+    
   },
 
   {
@@ -635,18 +492,7 @@ products: [
       'Developed a showcase website for the International Tea Event.',
       'Presented event information through a responsive React-based experience.',
     ],
-    recording: {
-      title: 'Tea Nepal',
-      duration: 'Web Demo',
-      steps: [
-        {
-          title: 'Event Website Placeholder',
-          description:
-            'Video placeholder for the Tea Nepal event showcase website.',
-          visualType: 'web-browser',
-        },
-      ],
-    },
+    
   },
 
   {
@@ -664,18 +510,6 @@ products: [
       'Developed a showcase website for Bits Innovation.',
       'Created the frontend using React and CSS.',
     ],
-    recording: {
-      title: 'Bits Innovation',
-      duration: 'Web Demo',
-      steps: [
-        {
-          title: 'Company Website Placeholder',
-          description:
-            'Video placeholder for the Bits Innovation website.',
-          visualType: 'web-browser',
-        },
-      ],
-    },
   },
 ],
     // ==========================================================================
