@@ -69,7 +69,7 @@ YASH KHAREL
 Co-Founder | Business Development | Senior Software Engineer | Ideator
 MBA (Queen Margaret University, BSC computer science Kathmandu Univeristy)
 Email: ${portfolioData.email} | Phone: ${portfolioData.phone} | Location: ${portfolioData.location}
-LinkedIn: ${portfolioData.linkedinUrl} | GitHub: https://github.com/yash048 | Website: ${portfolioData.originalSiteUrl}
+LinkedIn: ${portfolioData.linkedinUrl} | GitHub: https://github.com/YashKharel19 | Website: ${portfolioData.originalSiteUrl}
 
 =======================================================
 EXECUTIVE SUMMARY
@@ -246,7 +246,7 @@ ${ed.summary}
                 rel="noreferrer"
                 className="flex items-center gap-1 text-orange-700 hover:underline font-bold"
               >
-                <span>GitHub (yash048)</span>
+                <span>GitHub</span>
               </a>
               <span>&bull;</span>
               <a
@@ -256,7 +256,7 @@ ${ed.summary}
                 className="flex items-center gap-1 text-emerald-700 hover:underline font-bold"
               >
                 <Globe className="w-3.5 h-3.5" />
-                <span>kharelyash.com.np</span>
+                <span>Website</span>
               </a>
             </div>
           </div>
@@ -304,7 +304,7 @@ ${ed.summary}
                 <div className="flex flex-wrap items-center justify-between gap-1">
                   <strong className="font-extrabold text-slate-900 text-sm">Bagisha Reading Room:</strong>
                   <span className="text-[11px] font-bold px-2 py-0.5 rounded-md bg-blue-100 text-blue-800">
-                    100% Autopilot
+                    Ideation >> Self Sustaining
                   </span>
                 </div>
                 <p className="text-slate-600 mt-1">
