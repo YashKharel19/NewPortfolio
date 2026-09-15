@@ -1,19 +1,17 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Code2, 
-  Layers, 
-  Cpu, 
-  Database, 
-  Server, 
-  Smartphone, 
-  Palette, 
-  Terminal, 
-  Sparkles,
-  GitBranch,
-  Leaf,
-  Zap
-} from 'lucide-react';
+import { Zap } from 'lucide-react';
+import {
+  SiAngular,
+  SiReact,
+  SiTypescript,
+  SiPython,
+  SiPostgresql,
+  SiTailwindcss,
+  SiDocker,
+  SiGit,
+} from 'react-icons/si';
+import { DiJava } from 'react-icons/di';
 import { siteContent, TechIconItem } from '../content';
 import { playClickSound, playAchievementSound } from '../utils/soundEffects';
 
@@ -30,32 +28,30 @@ export const AnimatedTechStack = () => {
     ? techStackIcons
     : techStackIcons.filter((t) => t.category === activeCategory);
 
-  // Helper to render lucide icon component
+  // Helper to render the tech's original brand logo
   const renderIcon = (iconName: string, color: string) => {
     const props = { className: 'w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-300', style: { color } };
     switch (iconName) {
-      case 'Code2':
-        return <Code2 {...props} />;
-      case 'Layers':
-        return <Layers {...props} />;
-      case 'Leaf':
-        return <Leaf {...props} />;
-      case 'Terminal':
-        return <Terminal {...props} />;
-      case 'Server':
-        return <Server {...props} />;
-      case 'Smartphone':
-        return <Smartphone {...props} />;
-      case 'Palette':
-        return <Palette {...props} />;
-      case 'Database':
-        return <Database {...props} />;
-      case 'Cpu':
-        return <Cpu {...props} />;
-      case 'GitBranch':
-        return <GitBranch {...props} />;
+      case 'Java':
+        return <DiJava {...props} />;
+      case 'Angular':
+        return <SiAngular {...props} />;
+      case 'React':
+        return <SiReact {...props} />;
+      case 'TypeScript':
+        return <SiTypescript {...props} />;
+      case 'Python':
+        return <SiPython {...props} />;
+      case 'PostgreSQL':
+        return <SiPostgresql {...props} />;
+      case 'Tailwind':
+        return <SiTailwindcss {...props} />;
+      case 'Docker':
+        return <SiDocker {...props} />;
+      case 'Git':
+        return <SiGit {...props} />;
       default:
-        return <Code2 {...props} />;
+        return <SiReact {...props} />;
     }
   };
 

@@ -830,7 +830,7 @@ products: [
       category: 'Core',
       color: '#2563EB',
       bgGlow: 'rgba(37, 99, 235, 0.15)',
-      iconName: 'Code2'
+      iconName: 'TypeScript'
     },
     {
       id: 'python',
@@ -846,7 +846,7 @@ products: [
       category: 'Backend',
       color: '#0D9488',
       bgGlow: 'rgba(13, 148, 136, 0.15)',
-      iconName: 'Database'
+      iconName: 'PostgreSQL'
     },
     {
       id: 'tailwind',
@@ -854,7 +854,7 @@ products: [
       category: 'Frontend',
       color: '#06B6D4',
       bgGlow: 'rgba(6, 182, 212, 0.15)',
-      iconName: 'Cpu'
+      iconName: 'Tailwind'
     },
     {
       id: 'docker',
@@ -862,7 +862,7 @@ products: [
       category: 'Cloud & Tools',
       color: '#0284C7',
       bgGlow: 'rgba(2, 132, 199, 0.15)',
-      iconName: 'Box'
+      iconName: 'Docker'
     },
     {
       id: 'git',
@@ -870,7 +870,7 @@ products: [
       category: 'Cloud & Tools',
       color: '#DC2626',
       bgGlow: 'rgba(220, 38, 38, 0.15)',
-      iconName: 'GitBranch'
+      iconName: 'Git'
     }
   ],
 
