@@ -3,9 +3,10 @@
 // Easily edit text, links, photos, products, and jobs in this single file.
 // ============================================================================
 
-import yashPhoto from './assets/images/YK.JPG';
+import ojaswiPhoto from './assets/images/YK.JPG';
 import lumashaPhoto from './assets/images/lumasha.png';
 import bagishaPhoto from './assets/images/bagisha.png';
+import ojaswiPhoto from './assets/images/ojaswi.png';
 import ojaswiVideo from './assets/images/ojaswi.mp4';
 import bagishaVideo from './assets/images/bagisha.mp4';
 import lumashaVideo from './assets/images/lumashawebsite.mp4';
@@ -228,7 +229,7 @@ products: [
     tagline: 'Turning complex energy data into operational decisions',
     category: 'Enterprise Systems',
     badge: 'Professional Project',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     metrics: [
       'Virtual Power Plant',
       'Real-time operations',
@@ -267,7 +268,7 @@ products: [
     tagline: 'Personal portfolio for an interior designer',
     category: 'Mobile & Web',
     badge: 'Web Project',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     websiteUrl: 'https://ojaswirijal.com.np/',
     metrics: ['Personal portfolio website'],
     tags: ['HTML5', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery'],
@@ -290,7 +291,7 @@ products: [
     tagline: 'Official website platform',
     category: 'Mobile & Web',
     badge: 'Web Project',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     websiteUrl: 'https://dlfn.org/',
     metrics: ['Official organization website'],
     tags: ['Angular 6', 'CSS'],
@@ -313,7 +314,7 @@ products: [
     tagline: 'Financial reporting for the Office of the Auditor General, Nepal',
     category: 'Enterprise Systems',
     badge: 'Confidential',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     metrics: ['Government financial reporting'],
     tags: ['Angular 6', 'Java', 'CSS'],
     keyHighlights: [
@@ -341,7 +342,7 @@ products: [
     tagline: 'Reporting system for the Financial Comptroller General Office',
     category: 'Enterprise Systems',
     badge: 'Confidential',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     metrics: ['Government financial reporting'],
     tags: ['Angular 6', 'Java', 'CSS'],
     keyHighlights: [
@@ -369,7 +370,7 @@ products: [
     tagline: 'Centralized accounting for the Ministry of Foreign Affairs, Nepal',
     category: 'Enterprise Systems',
     badge: 'Confidential',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     metrics: ['Government accounting system'],
     tags: ['Angular 6', 'Java', 'CSS'],
     keyHighlights: [
@@ -386,7 +387,7 @@ products: [
     tagline: 'Computerized Government Accounting System',
     category: 'Enterprise Systems',
     badge: 'Government System',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     metrics: [
       'Government accounting',
       'Financial reporting',
@@ -408,7 +409,7 @@ products: [
     tagline: 'Financial operations for the Ministry of Foreign Affairs',
     category: 'Enterprise Systems',
     badge: 'Confidential',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     metrics: ['Revenue and financial reporting'],
     tags: ['Angular 6', 'Java', 'CSS'],
     keyHighlights: [
@@ -425,7 +426,7 @@ products: [
     tagline: 'Turning uploaded files and form data into usable documents',
     category: 'Enterprise Systems',
     badge: 'Confidential',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     metrics: ['File processing', 'API integration'],
     tags: ['React', 'CSS', '.NET Core API'],
     keyHighlights: [
@@ -443,7 +444,7 @@ products: [
     tagline: 'A responsive digital presence built for a technology company',
     category: 'Mobile & Web',
     badge: 'Professional Project',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     liveDemoUrl:
       'https://safe-fjord-65589.herokuapp.com/?fbclid=IwAR3aLhu3bmXxsGvxCFptk5JGxUtn5OwZm_dJjRYM2sdSRMxYhgu7r_77rLU#/',
     metrics: [
@@ -467,7 +468,7 @@ products: [
     tagline: 'A responsive digital presence for Semantro Pvt. Ltd.',
     category: 'Mobile & Web',
     badge: 'Web Project',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     websiteUrl: 'https://www.semantro.com',
     metrics: ['Corporate website'],
     tags: ['React', 'CSS'],
@@ -486,7 +487,7 @@ products: [
     tagline: 'Showcasing an international tea event',
     category: 'Mobile & Web',
     badge: 'Web Project',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     liveDemoUrl:
       'https://calm-inlet-98561.herokuapp.com/?fbclid=IwAR2VY9slzRuM3X_xoaUYE6YyMI-cGdvy8dxRwwUc6I8O4AxBCaC57BXQlYU',
     metrics: ['Event showcase website'],
@@ -505,7 +506,7 @@ products: [
     tagline: 'Showcasing a technology company through the web',
     category: 'Mobile & Web',
     badge: 'Web Project',
-    photo: yashPhoto,
+    photo: ojaswiPhoto,
     websiteUrl: 'http://www.bitsinnovation.com/',
     metrics: ['Corporate showcase website'],
     tags: ['React', 'CSS'],
